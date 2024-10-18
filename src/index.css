@@ -1,0 +1,81 @@
+:root {
+  --color-1: #CDB4DB;
+  --color-2: #FFC8DD;
+  --color-3: #FFAFCC;
+  --color-4: #BDE0FE;
+  --color-5: #A2D2FF;
+}
+
+[data-theme="dark"] {
+  --color-1: #8B6F97;
+  --color-2: #B88396;
+  --color-3: #9F6F79;
+  --color-4: #5D87A3;
+  --color-5: #42668F;
+}
+
+[data-theme="contrast"] {
+  --color-1: #000000;
+  --color-2: #000000;
+  --color-3: #000000;
+  --color-4: #bbff00;
+  --color-5: #bbff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--1);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.main {
+  min-height: 701px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+  width: 100%;
+}
+/*
+// width 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+// Track 
+::-webkit-scrollbar-track {
+  background: var(--color-1);
+}
+
+// Handle 
+::-webkit-scrollbar-thumb {
+  background: var(--color-5);
+  height: 20px;
+}
+
+// Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-3);
+}
+*/
+/*
+"importCSSModule": {
+    "prefix": "csm",
+    "scope": "javascript,typescript,javascriptreact",
+    "body": ["import styles from './${TM_FILENAME_BASE}.module.css'"],
+    "description": "Import CSS Module as `styles`"
+  },
+*/

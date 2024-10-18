@@ -1,0 +1,164 @@
+/* Ogólne style dla header */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 0 2rem;
+	position: fixed;
+	width: 100%;
+	background-color: var(--color-2);
+  }
+
+  header a {
+	margin: 0 2.5rem;
+	text-decoration: none;
+	font-size: 1.7rem;
+	color: var(--color-5);
+	height: 70px;
+	display: flex;
+	align-items: center;
+  }
+  
+  header h1 {
+	flex: none;
+	text-align: left;
+	margin: 0;
+  }
+  
+  .nav_btn {
+	display: none; /* Ukryj przycisk menu na desktopie */
+  }
+  
+  nav {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .language_selector {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 80px;
+	position: relative;
+  }
+  
+  .language_list {
+	position: absolute;
+	top: 100%;
+	background-color: #FFFFFF;
+	color: black;
+	right: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #ccc;
+  }
+  
+  .language_list li {
+	padding: 8px 12px;
+	cursor: pointer;
+  }
+  
+  .language_list li:hover {
+	background-color: #f0f0f0;
+  }
+  
+  .btn {
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	padding: 0.8em 1.4em;
+	font-size: 0.9rem;
+  }
+  
+  .btn_icon {
+	padding: 0;
+  }
+  
+  .icon {
+	font-size: 2rem;
+	color: var(--color-5);
+  }
+  
+  .dark {
+	background-color: var(--color-2);
+	color: var(--color-5);
+  }
+  
+  .light {
+	background-color: var(--color-2);
+	color: var(--color-5);
+  }
+  
+  .name {
+	color: var(--color-5);
+  }
+  
+  nav a {
+	margin: 0 2.5rem;
+	text-decoration: none;
+	font-size: 1.7rem;
+  }
+  
+  nav a:hover {
+	color: var(--color-4);
+	border-bottom: 3px solid var(--color-5);
+  }
+  
+  /* Style dla urządzeń mobilnych */
+  @media only screen and (max-width: 900px) {
+	.nav_btn {
+	  display: block; /* Pokaż przycisk menu na mobile */
+	  background: transparent;
+	  border: none;
+	  font-size: 1.8rem;
+	  cursor: pointer;
+	}
+  
+	header h1 {
+	  flex: 1;
+	  text-align: center; /* Wycentruj nazwę strony */
+	}
+  
+	nav {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background-color: var(--color-2);
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  transform: translateY(-100%);
+	  transition: transform 0.3s ease-in-out;
+	}
+  
+	nav.responsive_nav {
+	  transform: translateY(0);
+	}
+  
+	nav a {
+	  font-size: 2rem;
+	  margin: 1rem 0;
+	  color: var(--color-5);
+	}
+
+	nav a:hover {
+		border: none;
+	}
+  
+	.nav_close_btn {
+	  display: block;
+	  position: absolute;
+	  top: 2.7rem;
+	  left: 2rem;
+	  background: transparent;
+	  border: none;
+	  cursor: pointer;
+	}
+  }
+  
