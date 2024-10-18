@@ -12,8 +12,8 @@ function App () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="map" element={<Map />} />
+        <Route path="/UniNav" element={<Homepage />} />
+        <Route path="/UniNav/map" element={<Map />} />
       </Routes>
     </BrowserRouter>
   )
