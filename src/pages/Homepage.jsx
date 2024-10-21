@@ -13,8 +13,19 @@ const Homepage = () => {
         <div>
             <PageNav />
             <main className="main" data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
-                <div className={styles.container}>
-                    {t('Homepage')}
+                <div className={styles.container2}>
+                    <div className={styles.container}>
+                        <div className={styles.left}>
+                            {t('Homepage')}
+                        </div>
+                        
+                        <div className={styles.right}>
+                            {t('Homepage')}
+                        </div>
+                    </div>
+                    <div className={styles.bottom}>
+                        {t('Homepage')}
+                    </div>
                 </div>
             </main>
             <Footer />

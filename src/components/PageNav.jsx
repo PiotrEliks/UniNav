@@ -33,20 +33,20 @@ const PageNav = () => {
       <button className="nav_btn" onClick={showNavbar}>
         <FaBars className="icon" />
       </button>
-      <NavLink to="/UniNav/">
+      <NavLink to="/">
         <h1 className="name">
           UniNav
         </h1>
       </NavLink>
 
       <nav ref={navRef}>
-        <NavLink to="/UniNav/">
+        <NavLink to="/">
           {t('Homepage')}
         </NavLink>
-        <NavLink to="/UniNav/map">
+        <NavLink to="/map">
           {t('Map')}
         </NavLink>
-        <NavLink to="/UniNav/map">
+        <NavLink to="/map">
           {t('Map')}
         </NavLink>
         <button className="nav_btn nav_close_btn" onClick={showNavbar}>

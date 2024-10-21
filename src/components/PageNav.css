@@ -8,6 +8,7 @@ header {
 	position: fixed;
 	width: 100%;
 	background-color: var(--color-2);
+	z-index: 10;
   }
 
   header a {
@@ -103,8 +104,8 @@ header {
   }
   
   nav a:hover {
-	color: var(--color-4);
-	border-bottom: 3px solid var(--color-5);
+	color: var(--color-6);
+	border-bottom: 3px solid var(--color-6);
   }
   
   /* Style dla urządzeń mobilnych */
