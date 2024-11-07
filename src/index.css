@@ -45,8 +45,10 @@
   --color-1: #000000;
   --color-2: #000000;
   --color-3: #000000;
-  --color-4: #bbff00;
-  --color-5: #bbff00;
+  --color-4: #FFFFFF;
+  --color-5: #FFFF00;
+  --color-6: #FFFFFF;
+  --color-7: #FFFF00;
 }
 
 * {
@@ -61,14 +63,10 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
-  color: var(--color-light--1);
-  font-weight: 400;
-  line-height: 1.6;
+  font-family: Tahoma, sans-serif;
 }
 
 .main {
-  min-height: 701px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,33 +74,24 @@ body {
   padding-top: 70px;
   width: 100%;
 }
-/*
-// width 
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-// Track 
-::-webkit-scrollbar-track {
-  background: var(--color-1);
-}
-
-// Handle 
-::-webkit-scrollbar-thumb {
-  background: var(--color-5);
-  height: 20px;
-}
-
-// Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-3);
-}
-*/
-/*
-"importCSSModule": {
-    "prefix": "csm",
-    "scope": "javascript,typescript,javascriptreact",
-    "body": ["import styles from './${TM_FILENAME_BASE}.module.css'"],
-    "description": "Import CSS Module as `styles`"
-  },
-*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: var(--color-7);
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: var(--color-5);
+    height: 20px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-5);
+    }

@@ -2,9 +2,142 @@
     background-color: var(--color-3);
     color: var(--color-5);
     width: 100%;
-    min-height: 701px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.levelSelector {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+  
+  .levelBtn {
+    margin: 0 10px;
+    background-color: var(--color-5);
+    color: var(--color-7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .levelBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .currentLevel {
+    background-color: var(--color-5);
+    border-radius: 5px;
+    color: var(--color-7);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.levelBtn:hover{
+    background-color: var(--color-2);
+}
+
+.selectedLevel {
+    border: none;
+    background-color: var(--color-1);
+    color: var(--color-7);
+    width: 40px;
+    cursor: pointer;
+    margin: 1px;
+    padding: 10px;
+}
+
+.roomInfo {
+    width: 20%;
+    height: 300px;
+    background-color: var(--color-2);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 1;
+    margin-top: 70px;
+}
+
+.closeIcon {
+    color: var(--color-5);
+    font-size: 2rem;
+}
+
+.closeBtn {
+    cursor: pointer;
+    right: 30px;
+    position: absolute;
+}
+
+.mapContainer {
+    width: 750px;
+    height: 842px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 0;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 25px;
+}
+
+.mapContainer > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mapWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .mapContainer {
+      width: 414px;
+      height: 490px;
+    }
+
+    .levelSelector {
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+    }
+    .roomInfo {
+        width: 100%;
+    }
 }

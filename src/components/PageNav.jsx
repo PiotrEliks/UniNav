@@ -8,6 +8,7 @@ import { IoLanguage } from "react-icons/io5";
 import { MdLightMode, MdDarkMode, MdContrast } from "react-icons/md";
 import { ThemeContext } from '../contexts/theme.jsx';
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/logo.png';
 
 const PageNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,12 @@ const PageNav = () => {
         <FaBars className="icon" />
       </button>
       <NavLink to="/">
-        <h1 className="name">
+        {/*<h1 className="name">
           UniNav
-        </h1>
+        </h1>*/}
+        <div className="logo">
+          <img src={logo} alt="logo" width="100%" />
+        </div>
       </NavLink>
 
       <nav ref={navRef}>

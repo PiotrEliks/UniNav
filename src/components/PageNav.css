@@ -1,4 +1,3 @@
-/* Ogólne style dla header */
 header {
 	display: flex;
 	align-items: center;
@@ -28,7 +27,7 @@ header {
   }
   
   .nav_btn {
-	display: none; /* Ukryj przycisk menu na desktopie */
+	display: none;
   }
   
   nav {
@@ -48,13 +47,13 @@ header {
   .language_list {
 	position: absolute;
 	top: 100%;
-	background-color: #FFFFFF;
-	color: black;
+	background-color: var(--color-5);
+	color: var(--color-7);
 	right: 0;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	border: 1px solid #ccc;
+	border: 1px solid var(--color-7);
   }
   
   .language_list li {
@@ -63,7 +62,8 @@ header {
   }
   
   .language_list li:hover {
-	background-color: #f0f0f0;
+	background-color: var(--color-7);
+	color: var(--color-5);
   }
   
   .btn {
@@ -96,6 +96,10 @@ header {
   .name {
 	color: var(--color-5);
   }
+
+  .logo {
+	width: 16rem;
+  }
   
   nav a {
 	margin: 0 2.5rem;
@@ -108,10 +112,9 @@ header {
 	border-bottom: 3px solid var(--color-6);
   }
   
-  /* Style dla urządzeń mobilnych */
   @media only screen and (max-width: 900px) {
 	.nav_btn {
-	  display: block; /* Pokaż przycisk menu na mobile */
+	  display: block; 
 	  background: transparent;
 	  border: none;
 	  font-size: 1.8rem;
@@ -120,7 +123,7 @@ header {
   
 	header h1 {
 	  flex: 1;
-	  text-align: center; /* Wycentruj nazwę strony */
+	  text-align: center; 
 	}
   
 	nav {
@@ -162,4 +165,3 @@ header {
 	  cursor: pointer;
 	}
   }
-  

@@ -28,7 +28,7 @@ const Footer = ({ t }) => {
 
   return (
     <footer data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
-        <div>
+        <div className={styles.container}>
             @ 2024 UniNav
         </div>
     </footer>

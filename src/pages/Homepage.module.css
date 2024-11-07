@@ -5,9 +5,7 @@
 }
 
 .container {
-    color: var(--color-5);
     width: 100%;
-    min-height: 701px;
     display: flex;
     position: relative;
     background-color: var(--color-3);
@@ -22,6 +20,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
+    color: var(--color-5);
 }
 
 
@@ -38,10 +37,11 @@
     top: 0;
     z-index: 2;
     --mask:
-        radial-gradient(27.59px at 39px 50%, #000 99%, #0000 101%) 0 calc(50% - 40px) / 100% 80px,
-        radial-gradient(27.59px at -19px 50%, #0000 99%, #000 101%) 20px 50% / 100% 80px repeat-y;
+        radial-gradient(49.2px at 69px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/100% 120px,
+        radial-gradient(49.2px at -39px 50%,#0000 99%,#000 101%) 30px 50%/100% 120px repeat-y;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+    color: var(--color-5);
 }
 
 .bottom {
@@ -72,8 +72,8 @@
         z-index: 2; 
         min-height: 300px;
         --mask:
-            radial-gradient(34.99px at 50% 48px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-            radial-gradient(34.99px at 50% -18px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+            radial-gradient(49.2px at 50% 69px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+            radial-gradient(49.2px at 50% -39px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
         -webkit-mask: var(--mask);
               mask: var(--mask);
     }
