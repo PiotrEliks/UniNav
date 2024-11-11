@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Timeline } from 'react-twitter-widgets';
 import styles from './TwitterEmbed.module.css';
 import { ThemeContext } from '../contexts/theme.jsx';
 import Loader from './Loader.jsx'
@@ -32,20 +33,19 @@ const TwitterEmbed = () => {
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
-      <TwitterTimelineEmbed
+      <Timeline
         key={themeName}
-        sourceType="profile"
-        screenName="UAM_Poznan"
+        dataSource={{
+          sourceType: 'profile',
+          screenName: 'UAM_Poznan',
+        }}
         options={{
           width: '40rem',
           height: 600,
+          chrome: 'noheader nofooter noborders noscrollbar',
+          tweetLimit: 2,
+          theme: themeName
         }}
-        noHeader="false"
-        noBorders="false"
-        noFooter="false"
-        noScrollbar="true"
-        data-tweet-limit="2"
-        theme={themeName}
         onLoad={handleLoad}
         onError={handleError}
       />
