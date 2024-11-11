@@ -1,0 +1,23 @@
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.spinnerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}

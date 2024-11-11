@@ -1,4 +1,52 @@
 {
-    "Homepage": "Home page",
-    "Map": "Map"
+    "Nav": {
+        "Homepage": "Home page",
+        "Map": "Map",
+        "Academic-circles": "Academic cicles",
+        "MobileApp": "UniNav App",
+        "Info": "Informations",
+        "Usos": "USOS",
+        "Intranet": "Intranet"
+    },
+    "Homepage": {
+        "Top": {
+            "Welcome": "Welcome!",
+            "Text": "This webiste is created for students of the Physics and Astronomy department of Adam Mickiewicz Uniwersity in Poznan, it's purpose is to make finding informations and navigation throught the department easier."
+        },
+        "Left": {
+            "Header": "This website contains:"
+        },
+        "Right": {
+            "Header": "Check out the Universtity's posts on X"
+        }
+    },
+    "Map": {
+
+    },
+    "Academic-circle": {
+
+    },
+    "MobileApp": {
+        "Header": "UniNav mobile app"
+    },
+    "Info": {
+        "Header": "The most useful informations"
+    },
+    "Usos": {
+        "header": "The most important Functions on the USOS Platform",
+        "text1": "To log in to the USOS platform, go to <a href='https://usosweb.amu.edu.pl/' target='_blank'>link</a>, your login is a combination of the first three letters of your first name and the first three letters of your last name.",
+        "text2": "After logging in, go to the FOR STUDENTS tab.",
+        "text3": "In the final grades tab, you will find all the grades issued for each subject. Here you will always find your exam and coursework grades, and you can download your academic transcript.",
+        "text4": "By going to the REGISTRATIONS -> for courses tab, you will find a list of all available classes for enrollment. Find the name of your field of study and the number of the semester you are currently in. All the courses you need to register for in that semester will be listed here.",
+        "text5": "After registering for courses, remember to go to the Connections tab, where for each course, you must select the connection to the current study period. Without this, you will not be properly enrolled in the course. Also, remember not to create a bulk connection, as it does not work.",
+        "text6": "In the semester completion tab, you will find the status of each semester's completion, the number of points, and the subjects needed for completion. You can also submit a semester for early settlement.",
+        "text7": "In the applications tab, you can choose and submit from the list of available applications, e.g., an application for extending the exam session.",
+        "text8": "In the mLegitymacja tab, you will find the option to order an electronic version of your student ID, later available in the mObywatel app.",
+        "text9": "In the MY USOSWEB tab, you will find information about your class schedule, but remember that the schedule on USOS is often not updated in cases such as class rescheduling. It is best to check your schedule in the <a href='https://uam.sharepoint.com/sites/4203000000/SitePages/Plany-Zajec.aspx' target='_blank'>Intranet</a>.",
+        "text10": "You will also find a preview of your student ID photo and can change privacy settings regarding who can view your photo."
+    }
+    ,
+    "Footer": {
+        "SocialMedia": "Visti media of the department"
+    }
 }

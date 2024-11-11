@@ -1,0 +1,33 @@
+.main {
+  padding: 70px 0 0 0;
+  background-color: black;
+  width: 100%;
+}
+.top {
+  width: 100%;
+  height: 400px;
+  background-color: var(--intranet-top-bg);
+  color: var(--intranet-top-text);
+  --top:
+   linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
+   radial-gradient(farthest-side,#000 98%,#0000) bottom/100px 100px no-repeat;
+  -webkit-mask: var(--top);
+          mask: var(--top);
+}
+.middle {
+  width: 100%;
+  height: 300px;
+  background-color: var(--intranet-middle-bg);
+  color: var(--intranet-middle-text);
+  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px,#0000 98%,#000);
+  -webkit-mask: var(--bottom);
+          mask: var(--bottom);
+  margin-top: -40px;
+}
+
+.bottom {
+  width: 100%;
+  height: 400px;
+  background-color: var(--intranet-bottom-bg);
+  color: var(--intranet-bottom-text);
+}

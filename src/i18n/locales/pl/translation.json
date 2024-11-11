@@ -1,4 +1,51 @@
 {
-    "Homepage": "Strona główna",
-    "Map": "Mapa"
+    "Nav": {
+        "Homepage": "Strona główna",
+        "Map": "Mapa",
+        "Academic-circles": "Koła naukowe",
+        "MobileApp": "Aplikacja UniNav",
+        "Info": "Informacje",
+        "Usos": "USOS",
+        "Intranet": "Intranet"
+    },
+    "Homepage": {
+        "Top": {
+            "Welcome": "Witaj!",
+            "Text": "Jest to strona dla studentów Wydziału Fizyki i Astronomii Uniwersytetu im. Adama Mickiewicza w Poznaniu, stworzona aby ułatwić znalezienie informacji oraz poruszanie się po wydziale."
+        },
+        "Left": {
+            "Header": "Na stronie znajdziesz:"
+        },
+        "Right": {
+            "Header": "Sprawdź posty uczelni na platformie X"
+        }
+    },
+    "Map": {
+
+    },
+    "Academic-circle": {
+
+    },
+    "MobileApp": {
+        "Header": "Aplikacja mobilna UniNav"
+    },
+    "Info": {
+        "Header": "Najbardziej przydatne informacje"
+    },
+    "Usos": {
+        "header": "Najbardziej potrzebne funkcje na platformie USOS",
+        "text1": "Aby zalogować się na platformę USOS, wejdź w <a href='https://usosweb.amu.edu.pl/' target='_blank'>link</a>, twój login to złączenie pierwszych trzech liter imienia i pierwszych trzech liter nazwiska.",
+        "text2": "Po zalogowaniu przejdź do zakładki DLA STUDENTÓW.",
+        "text3": "W zakładce oceny końcowe znajdziesz wszystkie wystawione oceny z każdego przdemiotu. Tu zawsze znajdziesz oceny ze swoich egzaminów i zaliczeń. Oraz pobierzesz kartę przebiegu studiów.",
+        "text4": "Przechodząc do zakładki REJESTRACJE -> na przedmioty znajdziesz listę wszystkich zajęć jakie są dostępne do zapisania się. Znajdż na liście nazwę swojego kierunku oraz numer semestru na jakim aktualnie jesteś. W tym miejscu będą zebrane wszystkie przedmioty na jakie musisz się zapisać w danym semestrze.",
+        "text5": "Po zarejestrowaniu się na przedmioty pamiętaj o przejściu do zakładki Podpięcia, przy każdym przedmiocie musisz wybrać podpięcie pod aktualny okres studiów, bez tego nie będziesz poprawnie zapisany na przedmiot. Pamiętaj również, aby nie robić podpięcia zbiorczego, to nie działa.",
+        "text6": "W zakładce zaliczenia etapów, znajdziesz status zaliczenia każdego semstru oraz ilość punktów i przedmioty, które brakują do zalcizenia. Oraz możesz zgłosić etap do wcześniejszego rozliczenia.",
+        "text7": "W zakładce podania, możesz wybrać i złożyć z listy dostępnych podań, np. podanie o przedłużenie sesji.",
+        "text8": "W zakładce mLegitymacja, znajdziesz opcję zamówienia elektronicznej wersji swojej legitymacji studenckiej, dostępnej później w aplikacji mObywatel.",
+        "text9": "W zakładce MÓJ USOSWEB, znajdziesz informacje o planie zajęć, ale pamiętaj plan zajęć na USOSie jest często nieuaktualniany w przypadku np. przeniesienia przedmiotu na inne godziny. Plan najlepiej sprawdzaj w <a href='https://uam.sharepoint.com/sites/4203000000/SitePages/Plany-Zajec.aspx' target='_blank'>Intranecie</a>.",
+        "text10": "Znajdziesz tam również podglą swojego zdjęcia do legitymacji oraz zmienisz ustawienia prywatności odnośnie osób, które mogą wyświetlać twoje zdjęcie."
+    },
+    "Footer": {
+        "SocialMedia": "Odwiedź media wydziału"
+    }
 }

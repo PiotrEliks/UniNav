@@ -1,6 +1,6 @@
 .container {
-    background-color: var(--color-3);
-    color: var(--color-5);
+    background-color: var(--map-bg);
+    color: var(--map-header);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,73 +15,74 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-  }
+}
 
   .icon {
     font-size: 3rem;
   }
-  
+
   .levelBtn {
     margin: 0 10px;
-    background-color: var(--color-5);
-    color: var(--color-7);
+    background-color: var(--map-btn-bg);
+    color: var(--map-btn-text);
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
-  
+
   .levelBtn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+    background-color: var(--map-btn-bg-hover);
   }
-  
+
+  .levelBtn:disabled:hover {
+    background-color: var(--map-btn-bg-hover);
+    cursor:default;
+  }
+
   .currentLevel {
-    background-color: var(--color-5);
-    border-radius: 5px;
-    color: var(--color-7);
-    width: 3rem;
-    height: 3rem;
+    background-color: var(--map-btn-bg);
+    color: var(--map-btn-text);
+    width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid var(--map-btn-text);
+    border-bottom: 1px solid var(--map-btn-text);
   }
 
 .levelBtn:hover{
-    background-color: var(--color-2);
-}
-
-.selectedLevel {
-    border: none;
-    background-color: var(--color-1);
-    color: var(--color-7);
-    width: 40px;
-    cursor: pointer;
-    margin: 1px;
-    padding: 10px;
+    background-color: var(--map-btn-bg-hover);
 }
 
 .roomInfo {
-    width: 20%;
-    height: 300px;
-    background-color: var(--color-2);
+    width: 100%;
+    height: 100%;
+    background-color: var(--map-roomInfo-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     position: fixed;
+    /*
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: 1;
-    margin-top: 70px;
+    margin-top: 70px;*/
+}
+
+.roomInfoTitle {
+  font-size: 3rem;
+}
+
+.roomInfoText {
+  font-size: 2rem;
 }
 
 .closeIcon {
-    color: var(--color-5);
+    color: var(--map-close-icon);
     font-size: 2rem;
 }
 
@@ -102,22 +103,36 @@
     margin-top: 20px;
     padding: 0;
     background-color: #FFF;
-    border: 2px solid #000;
+    border: 2px solid var(--map-border);
     border-radius: 25px;
 }
 
 .mapContainer > * {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mapWrapper {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spinnerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
 @media only screen and (max-width: 1200px) {
@@ -132,12 +147,18 @@
 
     .levelSelector {
         flex-direction: row-reverse;
-        width: 100%;
+        margin-top: 20px;
     }
+
+    .currentLevel {
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid var(--map-btn-text);
+      border-right: 1px solid var(--map-btn-text);
+    }
+
     .map {
         width: 100%;
     }
-    .roomInfo {
-        width: 100%;
-    }
+
 }

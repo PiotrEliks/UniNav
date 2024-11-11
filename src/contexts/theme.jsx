@@ -19,10 +19,11 @@ const ThemeProvider = ({ children }) => {
   };
 
   const [isContrast, setIsContrast] = useState(false);
-  
+
   const toggleContrast = () => {
     const contrast = isContrast === true ? false : true;
     localStorage.setItem('isContrast', contrast);
+    setThemeName('dark');
     setIsContrast(contrast);
   };
 

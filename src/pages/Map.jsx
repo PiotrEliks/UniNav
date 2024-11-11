@@ -20,7 +20,8 @@ const Map = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1200px)' });
   const { t } = useTranslation();
   const [{ themeName, isContrast }] = useContext(ThemeContext);
-  
+  const [showElevator, setShowElevator] = useState(false);
+
   const [state, setState] = useState({
     selectedLevel: 0,
     transitionDirection: 'up'
@@ -28,19 +29,19 @@ const Map = () => {
 
   const { selectedLevel, transitionDirection } = state;
   const [selectedRoom, setSelectedRoom] = useState(null);
-  const [info, setInfo] = useState('');
+  const [info, setInfo] = useState([]);
 
   const renderLevel = () => {
     switch (selectedLevel) {
       case -1:
         return <Basement setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
       case 0:
-        return <Ground setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return <Ground setSelectedRoom={setSelectedRoom} setInfo={setInfo}  showElevator={showElevator} />;
       case 1:
         return <LevelOne setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
       case 2:
         return <LevelTwo setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
-      case 3: 
+      case 3:
         return <LevelThree setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
       default:
         return <Ground setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
@@ -52,12 +53,12 @@ const Map = () => {
     if (validLevels.includes(newLevel) && newLevel !== selectedLevel) {
       const direction = newLevel > selectedLevel ? 'up' : 'down';
       console.log(`Changing level from ${selectedLevel} to ${newLevel} (${direction})`);
-      
+
       setState({
         selectedLevel: newLevel,
         transitionDirection: direction
       });
-      
+
       setSelectedRoom(null);
     }
   };
@@ -95,17 +96,22 @@ const Map = () => {
         data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}
       >
         <div className={styles.container}>
-          {selectedRoom && (
+
+          <div className={styles.mapContainer}>
+          {selectedRoom ? (
             <div className={styles.roomInfo}>
-              <h2>Informacje o sali {info}</h2>
-              <p>{info}</p>
+              <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+              <p className={styles.roomInfoText}>{info.info}</p>
               <div className={styles.closeBtn} onClick={() => setSelectedRoom(null)}>
                 <FaWindowClose className={styles.closeIcon}/>
               </div>
             </div>
-          )}
-          <div className={styles.mapContainer}>
-            <Suspense fallback={<Loader />}>
+          ) : (
+            <Suspense fallback={
+              <div className={styles.spinnerContainer}>
+                <Loader />
+              </div>
+            }>
               <AnimatePresence custom={transitionDirection} mode="wait">
                 <motion.div
                   key={selectedLevel}
@@ -120,10 +126,12 @@ const Map = () => {
                 </motion.div>
               </AnimatePresence>
             </Suspense>
+          )}
+
           </div>
           <div className={styles.levelSelector}>
-            <button 
-              className={styles.levelBtn} 
+            <button
+              className={styles.levelBtn}
               onClick={goDown}
               disabled={selectedLevel === -1}
             >
@@ -132,14 +140,15 @@ const Map = () => {
             <div className={styles.currentLevel}>
               <p className={styles.icon}>{selectedLevel}</p>
             </div>
-            <button 
-              className={styles.levelBtn} 
+            <button
+              className={styles.levelBtn}
               onClick={goUp}
               disabled={selectedLevel === 3}
             >
               {isMobile ? <IoIosArrowBack  className={styles.icon}/> : <IoIosArrowUp className={styles.icon} />}
             </button>
           </div>
+          <button onClick={() => setShowElevator(!showElevator)}>Windy</button>
         </div>
       </main>
       <Footer />

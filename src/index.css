@@ -1,47 +1,167 @@
 :root {
-  /*--color-1: #CDB4DB;
-  --color-2: #FFC8DD;
-  --color-3: #FFAFCC;
-  --color-4: #BDE0FE;
-  --color-5: #A2D2FF;*/
-  /*--color-1: #C9CD90;
-  --color-2: #FED7E7;
-  --color-3: #F6F0E7;
-  --color-4: #BBD5E9;
-  --color-6: #C9D9D6;
-  --color-5: #000000;*/
-  /*--color-1: #2F324B;
-  --color-2: #FDDFDF;
-  --color-3: #FFFFFF;
-  --color-4: #C1DFED;
-  --color-6: #8EA3DF;
-  --color-5: #000000;*/
-  /*--color-1: #F66B32;
-  --color-2: #116148;
-  --color-3: #F6F2EE;
-  --color-4: #2994DB;
-  --color-6: #F2CCE7;
-  --color-5: #000000;*/
+  --header-bg: #B886D8;
+  --header-text: #EBDBF8;
+  --nav-text: #FFFFFF;
+  --nav-text-hover: #8ECB93;
+
+  --home-top-bg: #EBDBF8;
+  --home-top-color: #000000;
+  --home-left-bg: #8ECB93;
+  --home-left-text: #000000;
+  --home-right-bg: #FFFFFF;
+  --home-right-text: #000000;
+  --home-bottom-bg: #FFFFFF;
+  --home-slider: #FFFFFF;
+
+  --map-btn-bg: #B4DDB7;
+  --map-btn-text: #000000;
+  --map-btn-bg-hover: #8ECB93;
+  --map-bg: #EBDBF8;
+  --map-header: #000000;
+  --map-close-icon: #000000;
+  --map-border: #000000;
+  --map-roomInfo-bg: #B4DDB7;
+
+  --usos-bg: #EBDBF8;
+  --usos-text: #000000;
+
+  --ac-bg: #EBDBF8;
+  --ac-text: #000000;
+  --ac-card-bg: #B4DDB7;
+  --ac-card-border: #000000;
+  --ac-card-text: #000000;
+
+  --app-bg: #FFFFFF;
+  --app-header: #000000;
+  --app-text: #000000;
+  --app-line: #B886D8;
+
+  --intranet-top-bg: #EBDBF8;
+  --intranet-top-text: #000000;
+  --intranet-middle-bg: #B4DDB7;
+  --intraner-middle-text: #000000;
+  --intranet-bottom-bg: #FFFFFF;
+  --intranet-bottom-text: #000000;
+
   --color-1: #8ECB93;
-  --color-2: #B4DDB7;
+  --color-6: #B4DDB7;
   --color-3: #EBDBF8;
   --color-4: #D0B1E7;
-  --color-6: #B886D8;
+
+
+  --footer-bg: #B4DDB7;
+  --footer-text: #000000;
+
   --color-5: #000000;
   --color-7: #FFFFFF;
 }
 
 [data-theme="dark"] {
+  --header-bg: #7D5A9A;
+  --header-text: #B3A1D5;
+  --nav-text: #FFFFFF;
+  --nav-text-hover: #7FBB9D;
+
+  --home-top-bg: #B3A1D5;
+  --home-top-color: #FFFFFF;
+  --home-left-bg: #7FBB9D;
+  --home-left-text: #FFFFFF;
+  --home-right-bg: #000000;
+  --home-right-text: #FFFFFF;
+  --home-bottom-bg: #000000;
+
+  --map-btn-bg: #4F8A5B;
+  --map-btn-text: #FFFFFF;
+  --map-btn-bg-hover: #7FBB9D;
+  --map-bg: #B3A1D5;
+  --map-header: #FFFFFF;
+  --map-close-icon: #FFFFFF;
+  --map-border: #000000;
+  --map-roomInfo-bg: #4F8A5B;
+
+  --usos-bg: #B3A1D5;
+  --usos-text: #000000;
+
+  --ac-bg: #B3A1D5;
+  --ac-text: #FFFFFF;
+  --ac-card-bg: #7FBB9D;
+  --ac-card-border: #FFFFFF;
+  --ac-card-text: #FFFFFF;
+
+  --app-bg: #000000;
+  --app-header: #FFFFFF;
+  --app-text: #FFFFFF;
+  --app-line: #B3A1D5;
+
+  --info-left-bg: #7FBB9D;
+  --info-left-text: #000000;
+  --info-right-bg: #000000;
+  --info-right-text: #FFFFFF;
+
+  --intranet-top-bg: #B3A1D5;
+  --intranet-top-text: #000000;
+  --intranet-middle-bg: #7FBB9D;
+  --intraner-middle-text: #000000;
+  --intranet-bottom-bg: #000000;
+  --intranet-bottom-text: #FFFFFF;
+
   --color-1: #4F8A5B;
-  --color-2: #7FBB9D;
+  --color-6: #7FBB9D;
   --color-3: #B3A1D5;
   --color-4: #9B7BBD;
-  --color-6: #7D5A9A;
+
+
+  --footer-bg: #4F8A5B;
+  --footer-text: #000000;
+
   --color-5: #FFFFFF;
   --color-7: #000000;
 }
 
 [data-theme="contrast"] {
+  --header-bg: #000000;
+  --header-text: #FFFF00;
+  --nav-text: #FFFF00;
+  --nav-text-hover: #FFFFFF;
+
+  --home-top-bg: #000000;
+  --home-top-color: #FFFF00;
+  --home-left-bg: #FFFFFF;
+  --home-left-text: #000000;
+  --home-right-bg: #000000;
+  --home-right-text: #FFFF00;
+  --home-bottom-bg: #000000;
+
+  --map-btn-bg: #00FFFF;
+  --map-btn-text: #000000;
+  --map-btn-bg-hover: #00ADAD;
+  --map-bg: #000000;
+  --map-header: #FFFF00;
+  --map-close-icon: #FFFF00;
+  --map-border: #00FFFF;
+  --map-roomInfo-bg: #000000;
+
+  --usos-bg: #000000;
+  --usos-text: #FFFF00;
+
+  --ac-bg: #000000;
+  --ac-text: #FFFF00;
+  --ac-card-bg: #00FFFF;
+  --ac-card-border: #000000;
+  --ac-card-text: #000000;
+
+  --app-bg: #000000;
+  --app-header: #00FFFF;
+  --app-text: #FFFF00;
+  --app-line: #FFFF00;
+
+  --intranet-top-bg: #000000;
+  --intranet-top-text: #FFFF00;
+  --intranet-middle-bg: #FFFF00;
+  --intraner-middle-text: #000000;
+  --intranet-bottom-bg: #000000;
+  --intranet-bottom-text: #00FFFF;
+
   --color-1: #000000;
   --color-2: #000000;
   --color-3: #000000;
@@ -49,6 +169,9 @@
   --color-5: #FFFF00;
   --color-6: #FFFFFF;
   --color-7: #FFFF00;
+
+  --footer-bg: #000000;
+  --footer-text: #FFFF00;
 }
 
 * {
@@ -63,7 +186,7 @@ html {
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 .main {
@@ -79,18 +202,18 @@ body {
   ::-webkit-scrollbar {
     width: 8px;
     }
-    
+
     /* Track */
     ::-webkit-scrollbar-track {
     background: var(--color-7);
     }
-    
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
     background: var(--color-5);
     height: 20px;
     }
-    
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
     background: var(--color-5);

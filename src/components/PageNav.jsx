@@ -45,13 +45,25 @@ const PageNav = () => {
 
       <nav ref={navRef}>
         <NavLink to="/">
-          {t('Homepage')}
+          {t('Nav.Homepage')}
         </NavLink>
         <NavLink to="/map">
-          {t('Map')}
+          {t('Nav.Map')}
         </NavLink>
-        <NavLink to="/map">
-          {t('Map')}
+        <NavLink to="/academic-circles">
+          {t('Nav.Academic-circles')}
+        </NavLink>
+        <NavLink to="/MobileApp">
+          {t('Nav.MobileApp')}
+        </NavLink>
+        <NavLink to="/Info">
+          {t('Nav.Info')}
+        </NavLink>
+        <NavLink to="/Usos">
+          {t('Nav.Usos')}
+        </NavLink>
+        <NavLink to="/Intranet">
+          {t('Nav.Intranet')}
         </NavLink>
         <button className="nav_btn nav_close_btn" onClick={showNavbar}>
           <FaTimes className="icon" />

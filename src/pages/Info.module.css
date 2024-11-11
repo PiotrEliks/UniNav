@@ -1,0 +1,77 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--info-bg);
+  padding: 70px 0 0 0;
+  min-height: 701px;
+}
+
+.main h1 {
+  color: var(--info-header);
+  font-size: 4rem;
+}
+
+.main p {
+  color: var(--info-text);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: var(--info-left-bg);
+}
+
+.left {
+  background-color: var(--info-left-bg);
+  min-width: 60%;
+  height: 660px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+
+.right {
+  background-color: var(--info-right-bg);
+  min-width: 40%;
+  height: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  color: var(--info-left-bg);
+  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 60px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  color: var(--info-right-text);
+}
+
+@media only screen and (max-width: 1170px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .left {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      min-height: 401px;
+  }
+
+  .right {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      height: 600px;
+      --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/60px 100%;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  }
+}
