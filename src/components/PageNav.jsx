@@ -31,13 +31,10 @@ const PageNav = () => {
 
   return (
     <header data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
-      <button className="nav_btn" onClick={showNavbar}>
+      <button className="nav_btn" onClick={showNavbar} title={t('Icons.Menu')}>
         <FaBars className="icon" />
       </button>
       <NavLink to="/">
-        {/*<h1 className="name">
-          UniNav
-        </h1>*/}
         <div className="logo">
           <img src={logo} alt="logo" width="100%" />
         </div>
@@ -71,17 +68,17 @@ const PageNav = () => {
       </nav>
 
       <div className="language_selector">
-        <button type="button" onClick={toggleTheme} className="btn btn_icon" aria-label="toggle theme">
+        <button type="button" onClick={toggleTheme} className="btn btn_icon" aria-label="toggle theme" title={themeName === 'dark' ?t('Icons.Light') : t('Icons.Dark')}>
           {themeName === 'dark' ? (
             <MdLightMode className="icon" />
           ) : (
             <MdDarkMode className="icon" />
           )}
         </button>
-        <button type="button" onClick={toggleContrast} title="Zmiana kontrastu" className="btn btn_icon">
+        <button type="button" onClick={toggleContrast} title={t('Icons.Contrast')} className="btn btn_icon">
           <MdContrast className="icon" />
         </button>
-        <button title="Zmiana języka" onClick={() => setIsOpen(!isOpen)} className="btn btn_icon">
+        <button title={t('Icons.Language')} onClick={() => setIsOpen(!isOpen)} className="btn btn_icon">
           <IoLanguage className="icon" />
         </button>
         {isOpen && (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ground from "../assets/parter.svg";
+import ground from "../assets/parter_with_colors.svg";
 import './styles-svg.css'
 import { useMediaQuery } from 'react-responsive';
 
@@ -124,6 +124,11 @@ const Ground = ({ setSelectedRoom, setInfo, showElevator }) => {
               {roomInfo["sectorB"].title}
             </title>
           </circle>
+          <rect id="sectorK" x="360" y="370" width="36" height="90" fill="transparent" className="pointer">
+            <title>
+              {roomInfo["sectorK"].title}
+            </title>
+          </rect>
         </>
          :
           <>

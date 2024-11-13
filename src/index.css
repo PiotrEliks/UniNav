@@ -12,6 +12,11 @@
   --home-right-text: #000000;
   --home-bottom-bg: #FFFFFF;
   --home-slider: #FFFFFF;
+  --home-right-card-bg: #FAF9F6;
+  --home-right-card-text: #000000;
+  --home-right-card-border: #000000;
+  --home-background: rgb(184,134,216);
+  --home-background-gradient: linear-gradient(90deg, rgba(184,134,216,1) 1%, rgba(235,219,248,1) 95%);
 
   --map-btn-bg: #B4DDB7;
   --map-btn-text: #000000;
@@ -22,25 +27,35 @@
   --map-border: #000000;
   --map-roomInfo-bg: #B4DDB7;
 
-  --usos-bg: #EBDBF8;
+  --usos-bg: #FAF9F6;
   --usos-text: #000000;
+  --usos-a: #2572de;
 
-  --ac-bg: #EBDBF8;
+  --ac-bg: #FAF9F6;
   --ac-text: #000000;
-  --ac-card-bg: #B4DDB7;
+  --ac-card-bg: #8ECB93;
   --ac-card-border: #000000;
   --ac-card-text: #000000;
+  --ac-card-icon: #FFFFFF;
+  --ac-card-line: #FFFFFF;
 
-  --app-bg: #FFFFFF;
+  --app-bg: #FAF9F6;
   --app-header: #000000;
   --app-text: #000000;
   --app-line: #B886D8;
 
-  --intranet-top-bg: #EBDBF8;
+  --info-left-bg: #8ECB93;
+  --info-left-text: #000000;
+  --info-right-bg: #FAF9F6;
+  --info-right-text: #000000;
+  --info-a: #2572de;
+  --info-list-hover: #FFFFFF;
+
+  --intranet-top-bg: #FAF9F6;
   --intranet-top-text: #000000;
   --intranet-middle-bg: #B4DDB7;
   --intraner-middle-text: #000000;
-  --intranet-bottom-bg: #FFFFFF;
+  --intranet-bottom-bg: #EBDBF8;
   --intranet-bottom-text: #000000;
 
   --color-1: #8ECB93;
@@ -69,6 +84,11 @@
   --home-right-bg: #000000;
   --home-right-text: #FFFFFF;
   --home-bottom-bg: #000000;
+  --home-right-card-bg: #B3A1D5;
+  --home-right-card-text: #FFFFFF;
+  --home-right-card-border: #000000;
+  --home-background: rgb(125,90,154);
+  --home-background-gradient: linear-gradient(90deg, rgba(125,90,154,1) 1%, rgba(179,161,213,1) 95%);
 
   --map-btn-bg: #4F8A5B;
   --map-btn-text: #FFFFFF;
@@ -79,30 +99,35 @@
   --map-border: #000000;
   --map-roomInfo-bg: #4F8A5B;
 
-  --usos-bg: #B3A1D5;
-  --usos-text: #000000;
+  --usos-bg: #28282B;
+  --usos-text: #FFFFFF;
+  --usos-a: #4ccedf;
 
-  --ac-bg: #B3A1D5;
+  --ac-bg: #28282B;
   --ac-text: #FFFFFF;
   --ac-card-bg: #7FBB9D;
   --ac-card-border: #FFFFFF;
   --ac-card-text: #FFFFFF;
+  --ac-card-icon: #28282B;
+  --ac-card-line: #28282B;
 
-  --app-bg: #000000;
+  --app-bg: #28282B;
   --app-header: #FFFFFF;
   --app-text: #FFFFFF;
   --app-line: #B3A1D5;
 
   --info-left-bg: #7FBB9D;
   --info-left-text: #000000;
-  --info-right-bg: #000000;
+  --info-right-bg: #28282B;
   --info-right-text: #FFFFFF;
+  --info-a: #4ccedf;
+  --info-list-hover: #FFFFFF;
 
-  --intranet-top-bg: #B3A1D5;
-  --intranet-top-text: #000000;
+  --intranet-top-bg: #28282B;
+  --intranet-top-text: #FFFFFF;
   --intranet-middle-bg: #7FBB9D;
   --intraner-middle-text: #000000;
-  --intranet-bottom-bg: #000000;
+  --intranet-bottom-bg: #B3A1D5;
   --intranet-bottom-text: #FFFFFF;
 
   --color-1: #4F8A5B;
@@ -131,6 +156,12 @@
   --home-right-bg: #000000;
   --home-right-text: #FFFF00;
   --home-bottom-bg: #000000;
+  --home-right-card-bg: #000000;
+  --home-right-card-text: #00FFFF;
+  --home-right-card-border: #00FFFF;
+  --home-background: rgb(0,0,0);
+  --home-background-gradient: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+
 
   --map-btn-bg: #00FFFF;
   --map-btn-text: #000000;
@@ -143,17 +174,27 @@
 
   --usos-bg: #000000;
   --usos-text: #FFFF00;
+  --usos-a: #00FFFF;
 
   --ac-bg: #000000;
   --ac-text: #FFFF00;
   --ac-card-bg: #00FFFF;
   --ac-card-border: #000000;
   --ac-card-text: #000000;
+  --ac-card-icon: #000000;
+  --ac-card-line: #000000;
 
   --app-bg: #000000;
   --app-header: #00FFFF;
   --app-text: #FFFF00;
   --app-line: #FFFF00;
+
+  --info-left-bg: #FFFFFF;
+  --info-left-text: #000000;
+  --info-right-bg: #000000;
+  --info-right-text: #FFFF00;
+  --info-a: #00FFFF;
+  --info-list-hover: #ff0000;
 
   --intranet-top-bg: #000000;
   --intranet-top-text: #FFFF00;

@@ -95,60 +95,62 @@ const Map = () => {
         className="main"
         data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}
       >
-        <div className={styles.container}>
-
-          <div className={styles.mapContainer}>
-          {selectedRoom ? (
-            <div className={styles.roomInfo}>
-              <h2 className={styles.roomInfoTitle}>{info.title}</h2>
-              <p className={styles.roomInfoText}>{info.info}</p>
-              <div className={styles.closeBtn} onClick={() => setSelectedRoom(null)}>
-                <FaWindowClose className={styles.closeIcon}/>
+        <div className={styles.main}>
+          <h1>{t('Map.Header')}</h1>
+          <div className={styles.container}>
+            <div className={styles.mapContainer}>
+            {selectedRoom ? (
+              <div className={styles.roomInfo}>
+                <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+                <p className={styles.roomInfoText}>{info.info}</p>
+                <div className={styles.closeBtn} onClick={() => setSelectedRoom(null)}>
+                  <FaWindowClose className={styles.closeIcon}/>
+                </div>
               </div>
-            </div>
-          ) : (
-            <Suspense fallback={
-              <div className={styles.spinnerContainer}>
-                <Loader />
-              </div>
-            }>
-              <AnimatePresence custom={transitionDirection} mode="wait">
-                <motion.div
-                  key={selectedLevel}
-                  custom={transitionDirection}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  className={styles.mapWrapper}
-                >
-                  {renderLevel()}
-                </motion.div>
-              </AnimatePresence>
-            </Suspense>
-          )}
+            ) : (
+              <Suspense fallback={
+                <div className={styles.spinnerContainer}>
+                  <Loader />
+                </div>
+              }>
+                <AnimatePresence custom={transitionDirection} mode="wait">
+                  <motion.div
+                    key={selectedLevel}
+                    custom={transitionDirection}
+                    variants={variants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    className={styles.mapWrapper}
+                  >
+                    {renderLevel()}
+                  </motion.div>
+                </AnimatePresence>
+              </Suspense>
+            )}
 
-          </div>
-          <div className={styles.levelSelector}>
-            <button
-              className={styles.levelBtn}
-              onClick={goDown}
-              disabled={selectedLevel === -1}
-            >
-              {isMobile ? <IoIosArrowForward  className={styles.icon}/> : <IoIosArrowDown className={styles.icon} />}
-            </button>
-            <div className={styles.currentLevel}>
-              <p className={styles.icon}>{selectedLevel}</p>
             </div>
-            <button
-              className={styles.levelBtn}
-              onClick={goUp}
-              disabled={selectedLevel === 3}
-            >
-              {isMobile ? <IoIosArrowBack  className={styles.icon}/> : <IoIosArrowUp className={styles.icon} />}
-            </button>
+            <div className={styles.levelSelector}>
+              <button
+                className={styles.levelBtn}
+                onClick={goDown}
+                disabled={selectedLevel === -1}
+              >
+                {isMobile ? <IoIosArrowForward  className={styles.icon}/> : <IoIosArrowDown className={styles.icon} />}
+              </button>
+              <div className={styles.currentLevel}>
+                <p className={styles.icon}>{selectedLevel}</p>
+              </div>
+              <button
+                className={styles.levelBtn}
+                onClick={goUp}
+                disabled={selectedLevel === 3}
+              >
+                {isMobile ? <IoIosArrowBack  className={styles.icon}/> : <IoIosArrowUp className={styles.icon} />}
+              </button>
+            </div>
+            <button onClick={() => setShowElevator(!showElevator)}>Windy</button>
           </div>
-          <button onClick={() => setShowElevator(!showElevator)}>Windy</button>
         </div>
       </main>
       <Footer />

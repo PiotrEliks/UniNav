@@ -13,12 +13,15 @@ const MobileApp = () => {
       <PageNav />
       <main data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
         <div className={styles.main}>
+          <div className={styles.top}>
           <h1>{t('MobileApp.Header')}</h1>
-          <p>Info o aplikacji</p>
-
-          <p>Link do pobierania</p>
-          <div className={styles.wavyLine} />
-          <p>Może jakiś tutorial</p>
+          </div>
+          <div className={styles.middle}>
+            middle
+          </div>
+          <div className={styles.bottom}>
+            bottom
+          </div>
         </div>
       </main>
       <Footer />

@@ -11,6 +11,7 @@ import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
+import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
     const { t } = useTranslation();
@@ -27,21 +28,46 @@ const Homepage = () => {
             <PageNav />
             <main className="main" data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
                 <div className={styles.container2}>
-                    <div className={styles.bottom}>
+                    <div className={styles.top}>
                         <h1>{t('Homepage.Top.Welcome')}</h1>
                         <h2>{t('Homepage.Top.Text')}</h2>
                     </div>
                     <div className={styles.container}>
                         <div className={styles.left}>
                             <h1>{t('Homepage.Left.Header')}</h1>
-                            <ul>
-                                <li>Interaktywną mapę wydziału</li>
-                                <li>Informacje o studenckich kołach naukowych na wydziale</li>
-                                <li>Informacje o aplikacji mobilnej mającej na celu pomoc w poruszaniu się po wydziale</li>
-                                <li>Wszystkie przydatne linki w jednym miejscu</li>
-                                <li>Instrukcję korzystania z platformy USOS uczelini</li>
-                                <li>Instrukcję korzystania z Intranetu</li>
-                            </ul>
+                            <div className={styles.grid}>
+                                 <NavLink to="/map">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block1')}</p>
+                                    </div>
+                                </NavLink>
+                                <NavLink to="/Academic-circles">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block2')}</p>
+                                    </div>
+                                </NavLink>
+                                <NavLink to="/MobileApp">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block3')}</p>
+                                    </div>
+                                </NavLink>
+                                <NavLink to="/Info">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block4')}</p>
+                                    </div>
+                                </NavLink>
+                                <NavLink to="/Usos">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block5')}</p>
+                                    </div>
+                                </NavLink>
+                                <NavLink to="/Intranet">
+                                    <div className={styles.gridItem}>
+                                        <p>{t('Homepage.Left.Block6')}</p>
+                                    </div>
+                                </NavLink>
+                            </div>
+                            
                         </div>
 
                         <div className={styles.right}>
@@ -49,7 +75,7 @@ const Homepage = () => {
                             <TwitterEmbed />
                         </div>
                     </div>
-                    <div className={styles.top}>
+                    <div className={styles.bottom}>
                         <div className={styles.sliderContainer}>
                           <ImageSlider images={images}/>
                         </div>

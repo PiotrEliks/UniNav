@@ -3,12 +3,11 @@
   flex-direction: column;
   background-color: var(--info-bg);
   padding: 70px 0 0 0;
-  min-height: 701px;
 }
 
 .main h1 {
   color: var(--info-header);
-  font-size: 4rem;
+  font-size: 2.7rem;
 }
 
 .main p {
@@ -22,56 +21,177 @@
   background-color: var(--info-left-bg);
 }
 
-.left {
-  background-color: var(--info-left-bg);
-  min-width: 60%;
-  height: 660px;
+.top {
+  width: 100%;
+  background-color: var(--home-top-bg);
+  height: 100px;
+  color: var(--home-top-color);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-
-.right {
-  background-color: var(--info-right-bg);
-  min-width: 40%;
-  height: 660px;
+.left {
+  background-color: var(--info-left-bg);
+  height: 100%;
   display: flex;
+  width: 29%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: absolute;
   z-index: 2;
-  right: 0;
   top: 0;
-  color: var(--info-left-bg);
-  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 60px;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+  left: 0;
+  --c: 70px;
+  aspect-ratio: 2/3;
+  mask: radial-gradient(var(--c) 60% at right,#0000 calc(100% - 1px),#000);
+  background: var(--info-left-bg);
+}
+
+.left h1 {
+  font-size: 2.4rem;
+}
+
+.left ul {
+  margin-top: 10px;
+  list-style-type: circle;
+  font-size: 2rem;
+}
+
+.left li {
+  padding: 5px;
+}
+
+.left li:hover {
+  color: var(--info-list-hover);
+  cursor: pointer;
+}
+
+.middle{
+  height: 660px;
+  width: 29%;
+  background-color: var(--info-right-bg);;
+}
+
+.rightContent {
+  width: 71%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: var(--info-right-text);
+  padding: 15px 0 15px 0;
+}
+
+.rightContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.rightContent p {
+  font-size: 2rem;
+}
+
+.rightContent a {
+  color: var(--info-a);
+  text-decoration: none;
+}
+
+.corners {
+  margin-top: 20px;
+  width: 700px;
+  height: 400px;
+  --s: 100px;
+  border: 8px solid var(--home-left-bg); 
+  padding: 10px;
+  background: #f2f2f2 content-box;
+  mask: 
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+    0 0/calc(100% - var(--s)) calc(100% - var(--s));
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.right {
+  background-color: var(--info-right-bg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+}
+
+.listLevel1 {
+  font-size: 2rem;
+}
+
+.listLevel1 li {
+  padding: 5px 0 5px 0;
+}
+
+.listLevel2 {
+  font-size: 1.5rem;  
+}
+
+.listLevel2 li {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .left {
+    width: 35%;
+  }
+
+  .middle {
+    width: 35%;
+  }
+
+  .rightContent {
+    width: 65%;
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 1170px) {
   .container {
       flex-direction: column;
+      min-height: 1000px;
   }
 
   .left {
       width: 100%;
       position: relative;
-      z-index: 1;
-      min-height: 401px;
+      z-index: 2;
+      max-height: 450px;
   }
 
   .right {
       width: 100%;
       position: relative;
-      z-index: 2;
-      height: 600px;
-      --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/60px 100%;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+      z-index: 1;
+      min-height: 550px;
+  }
+
+  .rightContent {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .middle {
+    display: none;
   }
 }
+

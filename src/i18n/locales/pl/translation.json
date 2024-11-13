@@ -8,33 +8,223 @@
         "Usos": "USOS",
         "Intranet": "Intranet"
     },
+    "Icons": {
+        "Menu": "Menu",
+        "Light": "Tryb jasny",
+        "Dark": "Tryb ciemny",
+        "Contrast": "Wysoki kontrast",
+        "Language": "Zmiana języka"
+    },
     "Homepage": {
         "Top": {
             "Welcome": "Witaj!",
             "Text": "Jest to strona dla studentów Wydziału Fizyki i Astronomii Uniwersytetu im. Adama Mickiewicza w Poznaniu, stworzona aby ułatwić znalezienie informacji oraz poruszanie się po wydziale."
         },
         "Left": {
-            "Header": "Na stronie znajdziesz:"
+            "Header": "Na stronie znajdziesz:",
+            "Block1": "Interaktywna mapa wydziału",
+            "Block2": "Informacje o studenckich kołach naukowych",
+            "Block3": "Informacje o aplikacji mobilnej UniNav do pomocy w poruszaniu się po wydziale",
+            "Block4": "Najprzydatniejsze informacje dla studentów",
+            "Block5": "Opis korzystania z USOSa",
+            "Block6": "Opis korzystania z Intranetu"
         },
         "Right": {
             "Header": "Sprawdź posty uczelni na platformie X"
         }
     },
     "Map": {
-
+        "Header": "Interaktywna mapa wydziału Fizyki i Astronomi"
     },
     "Academic-circle": {
-
+        "Header": "Poznaj nasze koła studenckie i znajdź coś dla siebie",
+        "First": {
+            "Header": "Studenckie Koło Naukowe Akustyków 'SONIC'",
+            "p1": "Niektórzy twierdzą, że SONIC to najgłośniejsze koło naukowe na Naszej Uczelni. Inni - wręcz przeciwnie - uważają, że nikt nie zna się na ciszy tak jak my. Prawda - jak to zwykle bywa - leży gdzieś pośrodku. Jedno jest pewne - jesteśmy grupą ludzi żywo zafascynowanych akustyką i kochających dźwięk.",
+            "p2": "Z nami będziecie mogli zgłębić tajniki fal akustycznych, poeksperymentować z ultradźwiękami lub poprowadzić ciekawe badania w komorze bezechowej. Jeśli chcielibyście nas spotkać - możecie nas złapać w pokoju 213 Katedry Akustyki lub w pokoju 10 przy szklanym łączniku (obok pokoju Samorządu).",
+            "p3": "Aby wstąpić do naszego Koła, wystarczy jedynie że wypełnicie Kartę Członkowską (znajdziecie takową w pokoju 213 Katedry Akustyki, możemy Wam ją również podesłać mailowo do samodzielnego wydruku - wtedy napiszcie do nas). Po krótkim spotkaniu i rozmowie z naszym Prezesem (może się odbyć przy pysznej kapuczinie lub dobrej herbatce), ten wpisze Was na listę Członków Koła.",
+            "Supervisor": "Opiekun: mgr Jan Bondek, jakub.bondek@amu.edu.pl",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Marianna Jarzombek",
+            "Management-l2": "Wiceprezes Jakub Dumanowski",
+            "Management-l3": "Sekretarz Julia Wesołowska"
+        },
+        "Second": {
+            "Header": "Astronomiczne Koło Naukowe",
+            "p": "Astronomiczne Koło Naukowe UAM zrzesza studentów Uniwersytetu im. Adama Mickiewicza w Poznaniu interesujących się astronomią. Na spotkaniach Koła wymieniamy się wiedzą i ciekawostkami astronomicznymi, a także zapraszamy do wygłoszenia prelekcji gości zajmujących się rozmaitymi dziedzinami astronomii. W ramach naszej działalności uczestniczymy w organizacji wydarzeń popularnonaukowych, a raz w semestrze delegaci z naszego koła uczestniczą w Konferencji Studenckich Astronomicznych Kół Naukowych KSAKN.",
+            "Supervisor": "Opiekun: prof. UAM dr hab. Wojciech Dimitrow - dimitrov@amu.edu.pl",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Joanna Pietrucha",
+            "Management-l2": "Zastępca Prezesa Michał Pawłowski"
+        },
+        "Third": {
+            "Header": "Studenckie Koło Naukowe Biofizyków Molekularnych 'NEUTRINO'",
+            "p1": "Studenckie Koło Naukowe Biofizyków Molekularnych „Neutrino” rozpoczęło swoją działalność w marcu 2022 roku i jest jednym z najmłodszych kół naukowych na Wydziale Fizyki UAM, które zrzesza pełnych entuzjazmu i energii studentów z pasją do biofizyki molekularnej.",
+            "p2": "ZJednym z naszych głównych przedsięwzięć jest prowadzenie własnych, nowatorskich projektów badawczych. Obecnie skupiamy się na odkrywaniu skomplikowanych oddziaływań chlorofilu w roślinnych i glonowych białkach fotosyntetycznych. Wykorzystując techniki spektroskopii optycznej badamy fascynujące zjawiska absorpcji i emisji światła w tych złożonych układach biologicznych. Ponadto, z dumą informujemy, że z powodzeniem zaadaptowaliśmy komercyjny spektrofluorymetr do przeprowadzania pomiarów anizotropii fluorescencji, poszerzając tym samym obszar naszych potencjalnych badań. Część wyników naszej pracy mieliśmy okazję zaprezentować na I Poznańskiej Konferencji Młodych Fizyków, która odbyła się na Wydziale Fizyki UAM w maju 2022 roku.",
+            "p3": "Nasza działalność wykracza jednak dalece poza granice laboratorium. Niezmiernie ważne jest dla nas również popularyzowanie fizyki i biofizyki, dlatego aktywnie angażujemy się w różne działania edukacyjne mające rozbudzić ciekawość i pogłębić zrozumienie zjawisk zachodzących na poziomie molekularnym. Jednym z naszych najważniejszych osiągnięć na tym polu jest udział w Poznańskim Festiwalu Nauki i Sztuki - w roku 2023 nasze stoisko zatytułowane „Kiedy fizyka spotyka biologię” odwiedziła ponad setka ciekawych świata młodych ludzi, którzy mogli samodzielnie zrealizować przygotowane przez nas eksperymenty.",
+            "p4": "Jednak 'Neutrino' to nie tylko praca naukowa, ale także radość z życia! Organizujemy wycieczki oraz wyjazdy naukowe połączone ze zwiedzaniem, które stanowią ciekawą odskocznię od naszych codziennych studenckich obowiązków. Wiosną zorganizowaliśmy I Nocny Marsz Biofizyka zatytułowany „Do ujścia Różanego Potoku”. Ta 15-kilometrowa wędrówka nie tylko pozwoliła nam odkryć piękne przyrodniczo tereny w obrębie Poznania, ale także stworzyła doskonałą okazję do nieformalnych dyskusji naukowych i integracji między członkami naszego koła. W planach mamy również wizytę w Katedrze Biofizyki UMCS w Lublinie, podczas której chcemy zapoznać się z kierunkami badań i bazą aparaturową tej jednostki naukowej oraz możliwościami potencjalnej współpracy. Na pewno nie zabraknie również czasu na poznanie uroków Lublina.",
+            "p5": "Studenckie Koło Naukowe Biofizyków Molekularnych „Neutrino” to droga do nowych możliwości badawczych, wydarzeń naukowych i ekscytujących przygód. Skontaktuj się z nami już dziś i wyrusz w niezwykłą drogę odkrywania tajemnic mikroświata i osobistego rozwoju.",
+            "Supervisor": "Opiekun: dr Wojciech Giera - w_giera@amu.edu.pl",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Karolina Mielnik",
+            "Management-l2": "Wiceprezes krzysztof Pakuła",
+            "Management-l3": "Sekretarz Olga Stężycka"
+        },
+        "Fourth": {
+            "Header": "Studenckie Koło Naukowe 'Errno'",
+            "p": "Jesteśmy zainteresowani technologią, komputerami, wszystkim związanym z branża IT i nie tylko. Posiadamy chęć do nauki, próbujemy zrobić rzeczy które nam przyjdą na myśl, niezależnie od środowiska, języka programowania, silnika, programu w jakim mamy pracować jeżeli wpadniemy na pomysł próbujemy znaleźć jak najwygodniejsze narzędzie do jego zbudowania. Chcemy uczestniczyć w jak największej ilości konkursów, game jamów, itp, żeby uzyskać znajomości, doświadczenie oraz zbudować CV godne do prezentowania ale najważniejsze to przyjemność wynikająca z rozwoju i dobrej zabawy.",
+            "Supervisor": "Opiekun:",
+            "Supervisor-l1": "prof. UAM dr hab. Karol Bartkiewicz",
+            "Supervisor-l2": "mgr Szymon Krakowski",
+            "Management": "Skład:",
+            "Management-l1": "Nikodem Panknin",
+            "Management-l2": "Miłosz Klim",
+            "Management-l3": "Jakub Kwieciński"
+        },
+        "Fifth": {
+            "Header": "Studenckie Koło Naukowe Fizyków 'FUSION'",
+            "p1": "Studenckie Koło Naukowe Fizyków „Fusion”, jest najstarszą organizacja na wydziale- podmiotem z wieloletnim doświadczeniem, zrzeszającym studentów z wszystkich kierunków na Wydziale Fizyki. Znaczną część działalności koła skupia się na popularyzacji nauki. Sporo pracy wkładamy w przygotowanie zajęć, które były by ciekawe i klarownie wyjaśniały problemy badawcze. Nasza działalność jest świetną przestrzenią do dopracowywania warsztatu nauczycielskiego, a naukowa część koła zawiera całą charakterystykę pracy badawczej fizyka w mikroskali, seminaria oraz spotkania z naukowcami. Zrealizowaliśmy mnóstwo projektów badawczych, a każdy nowy pomysł pomożemy zrealizować. Rozwiązując różne wyzwania badawcze i edukacyjne, staliśmy się liderem w otrzymywaniu dofinansowań z Poznańskiego Parku Naukowego Technologicznego, współpracujemy z innymi instytucjami i kołami (połączyliśmy nawet fizykę z historią) oraz uczestniczymy w piknikach, festiwalach( Festiwal Nauki i Sztuki, Pyrkon, Noc Naukowców), wystawach i konferencjach. Regularnie wykonujemy pokazy w szkołach.",
+            "p2": "Jeśli chcesz poszerzyć swoje horyzonty zapraszamy do nas.",
+            "p3": "Wniosek",
+            "p4": "o dołączenie do grona członków Studenckiego Koła Naukowego Fizyków Fusion. Wniosek należy przekazać opiekunowi koła bądź członkom.",
+            "Supervisor": "Opiekun: dr Magdalena Grajek - grajek@amu.edu.pl",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Bartłomiej Kulas",
+            "Management-l2": "Wiceprezes Miłosz Wiśniewski",
+            "Management-l3": "Skarbnik Agnieszka Skubała",
+            "Management-l4": "Sekretarz Tymoteusz Braciszewski"
+        },
+        "Sixth": {
+            "Header": "Studenckie Koło Naukowe Optyki i Optometrii",
+            "p1": "Jako koło naukowe zajmujemy się popularyzacją nauki w zakresie optyki i optometrii. Organizujemy badania przesiewowe wzroku w placówkach edukacyjnych i społecznych. Przeprowadzamy pokazy naukowe dla dzieci pokazując doświadczenia ze świata optyki i jednocześnie prezentując jak prawidłowo należy dbać o wzrok. Na naszych social mediach można również znaleźć posty edukujące m.in. o tym czym są wady wzroku czy w jaki sposób pielęgnować okulary. Aktywnie bierzemy udział w konferencjach optyczno-optometrycznych organizowanych na terenie całej Polski, gdzie zaznajamiamy się z ekspertami z naszej branży i bierzemy udział w licznych szkoleniach, czy to pogłębiających naszą wiedzę zawodową, jak i tą z zakresu kompetencji miękkich.",
+            "p2": "Nasze koło powstało już w 2013 przy Laboratorium Fizyki Widzenia i Optometrii na Wydziale Fizyki UAM a jego pierwszym opiekunem był prof. dr hab. Ryszard Naskręcki. W okresie pandemii miało przerwę w większej działalności. W roku akademickim 2021/2022 zostało wznowione w zasadzie od zera i od razu ruszyło z kopyta. Na początku liczyło 11 członków. Szybko jednak osiągnęliśmy ich ponad 30 z wszystkich roczników studentów Optyki i Optometrii na Wydziale Fizyki - pomimo, że liczebność studentów na tym kierunku nie należy do najwyższych, czyniąc nasze koło największym na wydziale. Obecnie naszym opiekunem naukowym jest dr Zenon Woźniak.",
+            "Supervisor": "Opiekun: dr Magdalena Grajek - grajek@amu.edu.pl",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Zuzanna Pałgan",
+            "Management-l2": "Wiceprezes Hanna Pienierska",
+            "Management-l3": "Skarbnik Julia Zaborowska",
+            "Management-l4": "Sekretarz Julia Sikorska"
+        },
+        "Seventh": {
+            "Header": "Studenckie Koło Naukowe Fizyków Medycznych w Radioterapii 'RADIUS'",
+            "p1": "Koło Naukowe Fizyków w Radioterapii „Radius”, działa na Wydziale Fizyki od ponad 5 lat, zrzesza studentów studiujących biofizykę i fizykę medyczną. Działalność koła naukowego polega na łączeniu pracy badawczej z kliniką. Staramy się odpowiadać na pytania studentów dotyczące rozwoju swojej przyszłej kariery zawodowej i naukowej. Organizujemy wyjazdy naukowe. Pomagamy w organizacji stażów, wolontariatów i praktyk. W celu poszerzenia horyzontów swojej wiedzy aranżujemy konferencje, seminaria i webinaria. W ramach działalności koła edukujemy społeczność w tematach około onkologicznych. Prezentujemy aspekty związane z pracą Fizyka medycznego. Naświetlanie wiązkami promieniotwórczymi (radioterapia), umieszczanie źródeł promieniowania w ciele pacjenta (brachyterapia), planowanie przejścia wiązki przez tkanki ludzkie (planowanie leczenia) oraz odkrywanie nowych metod dostarczania leków i obrazowania (nanotechnologia). Nasze koła stawia na integrację środowisk fizycznych, biologicznych i chemicznych.",
+            "p2": "Prężnie działamy i chętnie nawiązujemy współpracę (Wielkopolskie Centrum Onkologii, Polskie Towarzystwo Fizyków Medycznych).",
+            "p3": "Wniosek",
+            "p4": "o dołączenie do grona członków Studenckiego Koła Naukowego Fizyków Fusion. Wniosek należy przekazać opiekunowi koła bądź członkom.",
+            "Supervisor": "Opiekun:",
+            "Supervisor-l1": "prof. dr hab. Julian Malicki - julian.malicki@wco.pl",
+            "Supervisor-l2": "dr Marta Kruszyna-Mochalska",
+            "Supervisor-l3": "mgr. Kinga Graczyk",
+            "Management": "Zarząd:",
+            "Management-l1": "Prezes Iga Strzelczak",
+            "Management-l2": "Sekretarz Iga Sienkiewicz",
+            "Management-l3": "Prowadzący sekcje ds marketingu: Aleksandra Dudkiewicz",
+            "Management-l4": "Prowadzący sekcje ds finansów: Maja Chocaj",
+            "Management-l5": "Wice Adrianna Kędziora"
+        }
     },
     "MobileApp": {
         "Header": "Aplikacja mobilna UniNav"
     },
     "Info": {
-        "Header": "Najbardziej przydatne informacje"
+        "Header": "Najbardziej przydatne informacje",
+        "List": {
+            "Header": "Wybierz z listy:",
+            "l1": "Wydział",
+            "l2": "Budynek wydziału",
+            "l3": "Struktura wydziału",
+            "l4": "Egzamin dyplomowy",
+            "l5": "Wykłady monograficzne",
+            "l6": "Praktyki",
+            "l7": "Biblioteka",
+            "l8": "Sylabusy i programy",
+            "l9": "USOS",
+            "l10": "Intranet"
+        },
+        "Info": {
+            "Header": "O wydziale",
+            "text": "Wydział Fizyki i Astronomii UAM to jeden z najważniejszych ośrodków naukowych w Polsce, zajmujący się szerokim spektrum badań w zakresie fizyki i astronomii oraz kształceniem przyszłych pokoleń naukowców i specjalistów. Pracownicy Wydziału prowadzą szeroką współpracę z wiodącymi ośrodkami badawczymi na całym świecie, realizują granty oraz publikują w prestiżowych międzynarodowych czasopismach. Wydział posiada również bogatą ofertę dydaktyczną, obejmującą m.in. Fizykę, Astronomię, Informatykę kwantową, Optometrię, Akustykę, Reżyserię dźwięku czy też Technologie komputerowe."
+        },
+        "Building": {
+            "Header": "Budynek wydziału",
+            "text": "Wydział Fizyki i Astronomii (dawniej Wydział Fizyki) mieści się w budunku na kampusie Morasko (ul. Uniwersytetu Poznańskiego 2, 61-614 Poznań) dzielącym się na segmenty: A, B, C, D, E, F, G, H, I, J, K oraz Centrum NanoBioMedyczne. Więcej informacji",
+            "text1": "tutaj"
+        },
+        "Structure": {
+            "Header": "Struktura wydziału",
+            "L1": "Instytut Fizyki",
+            "L2": "Instytut Spintroniki i Infromacji Kwantowej",
+            "L3": "Instytut Obserwatorium Astronomiczne",
+            "L4": "Katedra Akustyki",
+            "L5": "Laboratoria",
+            "L6": "Biuro Obsługi Studentów (BOS)",
+            "L7": "Biuro Obsługi Wydziału",
+            "L8": "Biblioteka",
+            "L9": "Warsztaty",
+            "text": "Jeśli potrzebujesz wyszukać informacje o konkretnym wykładowcy możesz to zrobić",
+            "l1": "Zakład Biofizyki Molekularnej",
+            "l2": "Zakład Fizyki Biomedycznej",
+            "l3": "Zakład Fizyki Matematycznej i Modelowania Komputerowego",
+            "l4": "Zakład Elektroniki Kwantowej",
+            "l5": "Zakład Fizyki Doświadczalnej Fazy Skondensowanej",
+            "l6": "Zakład Fizyki Materiałów Funkcjonalnych",
+            "l7": "Zakład Optyki Nieliniowej",
+            "l8": "Zakład Fizyki Nanostruktur",
+            "l9": "Zakład Fizyki Mezoskopowej",
+            "l10": "Zakład Teorii Materii Skondensowanej",
+            "l11": "Laboratorium Fizyki Widzenia i Optometrii",
+            "l12": "Laboratorium Fizyczne i Elektroniki Cyfrowej",
+            "l13": "Laboratorium Eksperymentu Fizycznego",
+            "l14": "Laboratorium Informatyki Stosowanej",
+            "l15": "Laboratorium komputerowe"
+        },
+        "Exam": {
+            "Header": "Egzamin dyplomowy",
+            "text": "Pod koniec studiów każdy student musi napisać, oddać i obronić swoją pracę inżynierską, licencjacką lub magisterską. Poniżej znajdują się linki do materiałów, które pomogą wam napisać i zdać pracę:",
+            "l1": "Zagadnienia egzaminacyjne",
+            "l2": "Wniosek o przeprowadzenie egzaminu dyplomowego",
+            "l3": "Wytyczne pisania prac dyplomowych",
+            "l4": "Wzór strony tytułowej - PDF",
+            "l5": "Wzór strony tytułowej - DOC",
+            "l6": "Zarządzenie Rektora Nr 3/2020/2021",
+            "l7": "Archiwum Prac Dyplomowych (APD) - instrukcja"
+        },
+        "MonoLectures": {
+            "Header": "Wykłady monograficzne",
+            "text": "Podczas studiów oprócz obowiązkowych zajęć i tych obieralnych jest jeszcze często konieczność wyboru wykładu monograficznego. Klikając",
+            "text1": "tutaj",
+            "text2": "przejdziesz do Intranetu, gdzie znajduje lista aktualnie dostępnych wykładów monograficznych oraz sylabusy do tych przedmiotów."
+        },
+        "Apprenticeship": {
+            "Header": "Praktyki studenckie",
+            "text": "Podczas studiów należy odbyć i zaliczyć studenckie praktyki w wymiarze 160h, najczęściej w semstrze letnim podczas wakacji. Klikając w",
+            "text1": "tutaj",
+            "text2": "przejdziesz na stronę Intranetu poświęconom praktykom, znajdziesz tam opiekuna ds. praktyk dla każdego kierunku, skierowanie na praktyki, oświadczenie o ubezpieczeniu oraz kartę przebiegu praktyk, w której opisuje się każdy przepracowany dzień oraz otrzymuje ocenę od opiekuna praktyk z firmy oraz uczelni."
+        },
+        "Library": {
+            "Header": "Biblioteka Wydziału Fizyki i Astronomii",
+            "text": "Księgozbiór Biblioteki Wydziału Fizyki i Astronomii to ponad 30 tysięcy książek naukowych. Zakres tematyczny księgozbioru obejmuje publikacje dotyczące fizyki, matematyki, informatyki, chemii, biologii, nanotechnologii, biofizyki oraz astronomii. Biblioteka posiada ponad 200 tytułów czasopism naukowych w wersji drukowanej oraz dostępnych online. Ze zbiorów można również skorzystać na miejscu w czytelni. Biblioteka znajduje się w sektorze C na pierwszym piętrze. Więcej szczegółowych informacji:"
+        },
+        "Sylabus": {
+            "Header": "Sylabusy i programy studiów",
+            "text": "Siatka godzinowa, rozpiska przedmiotów oraz sylabusy do wszystkich przedmiotów na danym kierunku studiów opisane i dostępne są",
+            "text1": "tutaj"
+        },
+        "Usos": {
+            "Header": "USOS",
+            "text": "Na platformie USOS znajdują się oceny z każdego przemiotu, status zaliczenia danego semestru, płatności za legitymację, ustawienia prywatności odnośnie zdjęcia, rejstacja na przedmiotu, podpinanie przedmiotów pod aktualny semestr. Więcej informacji",
+            "text1": "tutaj"
+        },
+        "Intranet": {
+            "Header": "Intranet",
+            "text": "W Intranecie wydziałowym znajdują się sylabusy przedmiotów i programy studiów, informacje o praktykach studenckich, informacje o wykładach monograficznych. Jest tam również dostęp do przeglądarkowej wersji pakietów Office takich jak Word, Excel, PowerPoint. Więcej informacji",
+            "text1": "tutaj"
+        }
     },
     "Usos": {
         "header": "Najbardziej potrzebne funkcje na platformie USOS",
-        "text1": "Aby zalogować się na platformę USOS, wejdź w <a href='https://usosweb.amu.edu.pl/' target='_blank'>link</a>, twój login to złączenie pierwszych trzech liter imienia i pierwszych trzech liter nazwiska.",
+        "text1": "Aby zalogować się na platformę USOS, wejdź w",
+        "text1a": ", twój login to złączenie pierwszych trzech liter imienia i pierwszych trzech liter nazwiska.",
         "text2": "Po zalogowaniu przejdź do zakładki DLA STUDENTÓW.",
         "text3": "W zakładce oceny końcowe znajdziesz wszystkie wystawione oceny z każdego przdemiotu. Tu zawsze znajdziesz oceny ze swoich egzaminów i zaliczeń. Oraz pobierzesz kartę przebiegu studiów.",
         "text4": "Przechodząc do zakładki REJESTRACJE -> na przedmioty znajdziesz listę wszystkich zajęć jakie są dostępne do zapisania się. Znajdż na liście nazwę swojego kierunku oraz numer semestru na jakim aktualnie jesteś. W tym miejscu będą zebrane wszystkie przedmioty na jakie musisz się zapisać w danym semestrze.",
@@ -42,10 +232,19 @@
         "text6": "W zakładce zaliczenia etapów, znajdziesz status zaliczenia każdego semstru oraz ilość punktów i przedmioty, które brakują do zalcizenia. Oraz możesz zgłosić etap do wcześniejszego rozliczenia.",
         "text7": "W zakładce podania, możesz wybrać i złożyć z listy dostępnych podań, np. podanie o przedłużenie sesji.",
         "text8": "W zakładce mLegitymacja, znajdziesz opcję zamówienia elektronicznej wersji swojej legitymacji studenckiej, dostępnej później w aplikacji mObywatel.",
-        "text9": "W zakładce MÓJ USOSWEB, znajdziesz informacje o planie zajęć, ale pamiętaj plan zajęć na USOSie jest często nieuaktualniany w przypadku np. przeniesienia przedmiotu na inne godziny. Plan najlepiej sprawdzaj w <a href='https://uam.sharepoint.com/sites/4203000000/SitePages/Plany-Zajec.aspx' target='_blank'>Intranecie</a>.",
+        "text9": "W zakładce MÓJ USOSWEB, znajdziesz informacje o planie zajęć, ale pamiętaj plan zajęć na USOSie jest często nieuaktualniany w przypadku np. przeniesienia przedmiotu na inne godziny. Plan najlepiej sprawdzaj w",
         "text10": "Znajdziesz tam również podglą swojego zdjęcia do legitymacji oraz zmienisz ustawienia prywatności odnośnie osób, które mogą wyświetlać twoje zdjęcie."
     },
+    "Intranet": {
+        "Header": "Najbardziej potrzebne informacje w Intranecie",
+        "text1": "Aby zalogować się do Intranetu wejdź w",
+        "text1a": "i do logowania użyj e-maila uczelnianego (@st.amu.edu.pl). Jeśli logujesz się pierwszy raz do usług Microsoft Office 365 sprawdź instrukcję dostępną na stronie",
+        "text2": "Po kliknięciu w pierwszą ikonkę od góry pionowego menu w lewym górnym rogu masz dostęp do przeglądarkowych wersji aplikacji z pakietu Office 365, w tym Word, Excel, PowerPoint, Teams i uczelnianą pocztę Outlook.",
+        "text3": "W polu do wyszukiwania na górze strony wyszukaj 'Wydział Fizyki'.",
+        "text4": "Będąc na stronie grupy 'Wydział Fizyki' przejdź do zakładki 'Dla studenta'.",
+        "text5": "W zakładce 'Dla studenta' znajdziesz uaktualniane na bieżąco plany zajęć, programy studiów i sylabusy, informacje o praktykach, rgzaminach dyplomowych, wykładach monograficznych i humanistycznych."
+    },
     "Footer": {
-        "SocialMedia": "Odwiedź media wydziału"
+        "SocialMedia": "UAM ZNAJDZIESZ TUTAJ"
     }
 }

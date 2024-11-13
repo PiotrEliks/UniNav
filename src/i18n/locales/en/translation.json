@@ -1,52 +1,250 @@
 {
     "Nav": {
-        "Homepage": "Home page",
+        "Homepage": "Home",
         "Map": "Map",
-        "Academic-circles": "Academic cicles",
+        "Academic-circles": "Student clubs",
         "MobileApp": "UniNav App",
         "Info": "Informations",
         "Usos": "USOS",
         "Intranet": "Intranet"
     },
+    "Icons": {
+        "Menu": "Menu",
+        "Light": "Light mode",
+        "Dark": "Dark mode",
+        "Contrast": "High kontrast",
+        "Language": "Change language"
+    },
     "Homepage": {
         "Top": {
             "Welcome": "Welcome!",
-            "Text": "This webiste is created for students of the Physics and Astronomy department of Adam Mickiewicz Uniwersity in Poznan, it's purpose is to make finding informations and navigation throught the department easier."
+            "Text": "This webiste is created for students of the Faculty of Physics and Astronomy of Adam Mickiewicz University in Poznań, it's purpose is to make finding informations and navigation throught the Faculty easier."
         },
         "Left": {
-            "Header": "This website contains:"
+            "Header": "This website contains:",
+            "Block1": "Interactive map of the faculty",
+            "Block2": "Informations about student's clubs",
+            "Block3": "Informations about a UniNav mobile app, which helps to move throughtout the building",
+            "Block4": "The most useful informations for students",
+            "Block5": "Instruction of using USOS",
+            "Block6": "Instructions of using Intranet"
         },
         "Right": {
             "Header": "Check out the Universtity's posts on X"
         }
     },
-    "Map": {
-
+    "Map": {    
+        "Header": "Interactive map of Faculty od Physics and Astronomy"
     },
     "Academic-circle": {
-
+        "Header": "Discover our student clubs and find something for yourself",
+        "First": {
+            "Header": "Student Scientific Club of Acousticians 'SONIC'",
+            "p1": "Some say that SONIC is the loudest scientific club at our university. Others - quite the opposite - believe that no one knows silence like we do. The truth, as usual, lies somewhere in between. One thing is certain - we are a group of people passionately fascinated by acoustics and who love sound.",
+            "p2": "With us, you will be able to explore the secrets of acoustic waves, experiment with ultrasound, or conduct interesting research in an anechoic chamber. If you would like to meet us - you can find us in room 213 of the Department of Acoustics or in room 10 by the glass connector (next to the Student Council room).",
+            "p3": "To join our club, all you need to do is fill out a Membership Form (you can find it in room 213 of the Department of Acoustics, or we can send it to you by email for self-printing - just let us know). After a short meeting and a conversation with our President (it may take place with a delicious cappuccino or a nice cup of tea), they will add you to the list of club members.",
+            "Supervisor": "Supervisor: M.A. Jan Bondek, jakub.bondek@amu.edu.pl",
+            "Management": "Management:",
+            "Management-l1": "President Marianna Jarzombek",
+            "Management-l2": "Vice President Jakub Dumanowski",
+            "Management-l3": "Secretary Julia Wesołowska"
+        },
+        "Second": {
+            "Header": "Astronomical Scientific Club",
+            "p": "The Astronomical Scientific Club at Adam Mickiewicz University in Poznań brings together students interested in astronomy. At our meetings, we exchange knowledge and astronomical trivia, as well as invite guests who specialize in various fields of astronomy to give lectures. As part of our activities, we participate in organizing popular science events, and once a semester, delegates from our club attend the Conference of Student Astronomical Scientific Clubs (KSAKN).",
+            "Supervisor": "Supervisor: Prof. UAM Dr. Hab. Wojciech Dimitrow - dimitrov@amu.edu.pl",
+            "Management": "Management:",
+            "Management-l1": "President Joanna Pietrucha",
+            "Management-l2": "Vice President Michał Pawłowski"
+        },
+        "Third": {
+            "Header": "Student Scientific Club of Molecular Biophysicists 'NEUTRINO'",
+            "p1": "The Student Scientific Club of Molecular Biophysicists 'Neutrino' started its activity in March 2022 and is one of the youngest scientific clubs at the Faculty of Physics at Adam Mickiewicz University in Poznań, bringing together enthusiastic and energetic students passionate about molecular biophysics.",
+            "p2": "One of our main endeavors is conducting our own innovative research projects. Currently, we are focusing on exploring the complex interactions of chlorophyll in plant and algal photosynthetic proteins. Using optical spectroscopy techniques, we study the fascinating phenomena of light absorption and emission in these complex biological systems. Additionally, we are proud to announce that we have successfully adapted a commercial spectrofluorometer for performing fluorescence anisotropy measurements, thus expanding the scope of our potential research. Some of our work has been presented at the First Poznań Conference of Young Physicists, held at the Faculty of Physics at Adam Mickiewicz University in May 2022.",
+            "p3": "However, our activities go far beyond the laboratory. It is also extremely important for us to popularize physics and biophysics, which is why we actively engage in various educational activities aimed at sparking curiosity and deepening the understanding of phenomena occurring at the molecular level. One of our most important achievements in this area is our participation in the Poznań Science and Art Festival - in 2023, over a hundred curious young people visited our booth titled 'When Physics Meets Biology', where they could independently perform the experiments we had prepared.",
+            "p4": "But 'Neutrino' is not just about scientific work, but also about enjoying life! We organize trips and scientific excursions combined with sightseeing, providing an interesting break from our daily student duties. In the spring, we organized the First Night Biophysics March titled 'To the Mouth of the Różany Potok'. This 15-kilometer hike not only allowed us to discover beautiful natural areas around Poznań, but also created an excellent opportunity for informal scientific discussions and integration among our club members. We also have plans for a visit to the Department of Biophysics at UMCS in Lublin, where we aim to learn about the research directions and equipment of this scientific unit, as well as explore potential collaboration opportunities. Of course, we will also have time to enjoy the charm of Lublin.",
+            "p5": "The Student Scientific Club of Molecular Biophysicists 'Neutrino' is a pathway to new research opportunities, scientific events, and exciting adventures. Contact us today and embark on an extraordinary journey of discovering the mysteries of the micro-world and personal development.",
+            "Supervisor": "Supervisor: Dr. Wojciech Giera - w_giera@amu.edu.pl",
+            "Management": "Management:",
+            "Management-l1": "President Karolina Mielnik",
+            "Management-l2": "Vice President Krzysztof Pakuła",
+            "Management-l3": "Secretary Olga Stężycka"
+        },
+        "Fourth": {
+            "Header": "Student Scientific Club 'Errno'",
+            "p": "We are interested in technology, computers, everything related to the IT industry, and more. We have a desire to learn and try to create things that come to our minds, regardless of the environment, programming language, engine, or program we are working with. If we come up with an idea, we try to find the most convenient tool to build it. We want to participate in as many competitions, game jams, etc., as possible to gain connections, experience, and build a CV worth presenting. But most importantly, we seek the enjoyment that comes from development and having fun.",
+            "Supervisor": "Supervisor:",
+            "Supervisor-l1": "Prof. UAM Dr. Hab. Karol Bartkiewicz",
+            "Supervisor-l2": "M.A. Szymon Krakowski",
+            "Management": "Members:",
+            "Management-l1": "Nikodem Panknin",
+            "Management-l2": "Miłosz Klim",
+            "Management-l3": "Jakub Kwieciński"
+        },
+        "Fifth": {
+            "Header": "Student Scientific Club of Physicists 'FUSION'",
+            "p1": "Our club is a student organization that brings together students from all fields at the Faculty of Physics. A significant part of our activities focuses on popularizing science. We put a lot of effort into preparing lessons that are both interesting and clearly explain research problems. Our activities provide a great space for refining teaching skills, and the scientific part of the club includes the full scope of research work in physics at the microscopic scale, seminars, and meetings with scientists. We have completed numerous research projects, and we help realize every new idea. By solving various research and educational challenges, we have become leaders in obtaining funding from the Poznań Science and Technology Park, collaborate with other institutions and clubs (we even combined physics with history), and participate in picnics, festivals (Science and Art Festival, Pyrkon, Night of Scientists), exhibitions, and conferences. We regularly give presentations in schools.",
+            "p2": "If you want to broaden your horizons, feel free to join us.",
+            "p3": "Application",
+            "p4": "to join the ranks of members of the Student Scientific Club of Physicists 'Fusion'. The application should be submitted to the club's supervisor or members.",
+            "Supervisor": "Supervisor: Dr. Magdalena Grajek - grajek@amu.edu.pl",
+            "Management": "Management:",
+            "Management-l1": "President Bartłomiej Kulas",
+            "Management-l2": "Vice President Miłosz Wiśniewski",
+            "Management-l3": "Treasurer Agnieszka Skubała",
+            "Management-l4": "Secretary Tymoteusz Braciszewski"
+        },
+        "Sixth": {
+            "Header": "Student Scientific Club of Optics and Optometry",
+            "p1": "As a scientific club, we focus on popularizing science in the fields of optics and optometry. We organize vision screening in educational and social institutions. We conduct scientific demonstrations for children, showing experiments from the world of optics while also presenting how to properly take care of eyesight. On our social media, you can also find posts educating, among other things, about visual impairments and how to care for glasses. We actively participate in optical and optometric conferences held throughout Poland, where we meet experts in our field and take part in various training sessions that deepen both our professional knowledge and soft skills.",
+            "p2": "Our club was established in 2013 at the Laboratory of Vision Physics and Optometry at the Faculty of Physics at Adam Mickiewicz University, and its first supervisor was Prof. Dr. Hab. Ryszard Naskręcki. During the pandemic, we had a break in our activities. In the academic year 2021/2022, the club was essentially restarted from scratch and quickly gained momentum. Initially, it had 11 members, but we soon exceeded 30 members from all years of the Optics and Optometry program at the Faculty of Physics - despite the fact that the number of students in this program is not very high, making our club the largest in the faculty. Currently, our scientific supervisor is Dr. Zenon Woźniak.",
+            "Supervisor": "Supervisor: Dr. Magdalena Grajek - grajek@amu.edu.pl",
+            "Management": "Management:",
+            "Management-l1": "President Zuzanna Pałgan",
+            "Management-l2": "Vice President Hanna Pienierska",
+            "Management-l3": "Treasurer Julia Zaborowska",
+            "Management-l4": "Secretary Julia Sikorska"
+        },
+        "Seventh": {
+            "Header": "Student Scientific Club of Medical Physicists in Radiotherapy 'RADIUS'",
+            "p1": "The 'Radius' Medical Physics Club has been operating at the Faculty of Physics for over 5 years, bringing together students studying biophysics and medical physics. The club's activities involve combining research work with clinical practice. We aim to answer students' questions about the development of their future professional and scientific careers. We organize scientific trips and assist in organizing internships, volunteer work, and practical placements. To expand our knowledge, we arrange conferences, seminars, and webinars. As part of our activities, we educate the community on oncology-related topics. We present aspects of the work of a medical physicist, including radiation therapy, placing radiation sources in the patient's body (brachytherapy), planning the passage of beams through human tissues (treatment planning), and discovering new methods for drug delivery and imaging (nanotechnology). Our club emphasizes the integration of physical, biological, and chemical environments.",
+            "p2": "We are actively engaged and eager to establish collaborations (Greater Poland Oncology Center, Polish Society of Medical Physicists).",
+            "p3": "Application",
+            "p4": "to join the ranks of members of the Student Scientific Club of Medical Physicists 'Fusion'. The application should be submitted to the club's supervisor or members.",
+            "Supervisor": "Supervisor:",
+            "Supervisor-l1": "Prof. Dr. Hab. Julian Malicki - julian.malicki@wco.pl",
+            "Supervisor-l2": "Dr. Marta Kruszyna-Mochalska",
+            "Supervisor-l3": "M.A. Kinga Graczyk",
+            "Management": "Management:",
+            "Management-l1": "President Iga Strzelczak",
+            "Management-l2": "Secretary Iga Sienkiewicz",
+            "Management-l3": "Head of Marketing Section: Aleksandra Dudkiewicz",
+            "Management-l4": "Head of Finance Section: Maja Chocaj",
+            "Management-l5": "Vice President Adrianna Kędziora"
+        }
     },
     "MobileApp": {
         "Header": "UniNav mobile app"
     },
     "Info": {
-        "Header": "The most useful informations"
+        "Header": "The most useful informations",
+        "List": {
+            "Header": "Select from the list:",
+            "l1": "Faculty",
+            "l2": "Faculty building",
+            "l3": "Faculty structure",
+            "l4": "Diploma exam",
+            "l5": "Monographic lectures",
+            "l6": "Internships",
+            "l7": "Library",
+            "l8": "Syllabus and programs",
+            "l9": "USOS",
+            "l10": "Intranet"
+        },
+        "Info": {
+            "Header": "About the Faculty",
+            "text": "The Faculty of Physics and Astronomy at Adam Mickiewicz University (UAM) is one of the most important scientific centers in Poland, conducting a wide range of research in physics and astronomy and educating future generations of scientists and specialists. Faculty staff collaborate extensively with leading research centers worldwide, carry out grants, and publish in prestigious international journals. The Faculty also offers a rich educational program, including Physics, Astronomy, Quantum Computing, Optometry, Acoustics, Sound Direction, and Computer Technologies."
+        },
+        "Building": {
+            "Header": "Faculty Building",
+            "text": "The Faculty of Physics and Astronomy (formerly the Faculty of Physics) is located in a building on the Morasko campus (ul. Uniwersytetu Poznańskiego 2, 61-614 Poznań), divided into segments: A, B, C, D, E, F, G, H, I, J, K, and the NanoBioMedical Center. More information",
+            "text1": "here"
+        },
+        "Structure": {
+            "Header": "Faculty Structure",
+            "L1": "Institute of Physics",
+            "L2": "Institute of Spintronics and Quantum Information",
+            "L3": "Institute of Astronomical Observatory",
+            "L4": "Department of Acoustics",
+            "L5": "Laboratories",
+            "L6": "Student Services Office (BOS)",
+            "L7": "Faculty Services Office",
+            "L8": "Library",
+            "L9": "Workshops",
+            "text": "If you need to search for information about a specific lecturer, you can do so",
+            "l1": "Department of Molecular Biophysics",
+            "l2": "Department of Biomedicine Physics",
+            "l3": "Department of Mathematical Physics and Computational Modeling",
+            "l4": "Department of Quantum Electronics",
+            "l5": "Department of Experimental Condensed Matter Physics",
+            "l6": "Department of Functional Materials Physics",
+            "l7": "Department of Nonlinear Optics",
+            "l8": "Department of Nanostructure Physics",
+            "l9": "Department of Mesoscopic Physics",
+            "l10": "Department of Condensed Matter Theory",
+            "l11": "Vision and Optometry Physics Laboratory",
+            "l12": "Physical and Digital Electronics Laboratory",
+            "l13": "Physical Experiment Laboratory",
+            "l14": "Applied Computer Science Laboratory",
+            "l15": "Computer Laboratory"
+        },
+        "Exam": {
+            "Header": "Diploma Exam",
+            "text": "At the end of their studies, each student must write, submit, and defend their engineering, bachelor's, or master's thesis. Below are links to materials that will help you write and pass your thesis:",
+            "l1": "Examination topics",
+            "l2": "Application for the diploma exam",
+            "l3": "Guidelines for writing theses",
+            "l4": "Title page template - PDF",
+            "l5": "Title page template - DOC",
+            "l6": "Rector's Regulation No. 3/2020/2021",
+            "l7": "Diploma Thesis Archive (APD) - instructions"
+        },
+        "MonoLectures": {
+            "Header": "Monographic Lectures",
+            "text": "During your studies, in addition to mandatory and elective courses, there is often the need to choose a monographic lecture. By clicking",
+            "text1": "here",
+            "text2": "you will be directed to the Intranet, where you can find a list of currently available monographic lectures and syllabi for these subjects."
+        },
+        "Apprenticeship": {
+            "Header": "Student Internships",
+            "text": "During your studies, you must complete and pass a student internship of 160 hours, usually during the summer semester. By clicking on",
+            "text1": "here",
+            "text2": "you will be directed to the Intranet page dedicated to internships, where you will find the internship supervisor for each program, the internship referral, an insurance declaration, and the internship progress report, in which you describe each day worked and receive an evaluation from both the company and the university internship supervisors."
+        },
+        "Library": {
+            "Header": "Library of the Faculty of Physics and Astronomy",
+            "text": "The collection of the Library of the Faculty of Physics and Astronomy includes over 30,000 scientific books. The thematic scope of the collection covers publications on physics, mathematics, computer science, chemistry, biology, nanotechnology, biophysics, and astronomy. The library holds more than 200 titles of scientific journals in both print and online versions. The collections can also be accessed on-site in the reading room. The library is located in Sector C on the first floor. For more detailed information:"
+        },
+        "Sylabus": {
+            "Header": "Syllabus and Study Programs",
+            "text": "The schedule, list of subjects, and syllabi for all subjects in a given program are described and available",
+            "text1": "here"
+        },
+        "Usos": {
+            "Header": "USOS",
+            "text": "The USOS platform contains grades for each subject, the status of semester completion, payments for the student ID, privacy settings for the photo, course registration, and adding subjects to the current semester. For more information",
+            "text1": "here"
+        },
+        "Intranet": {
+            "Header": "Intranet",
+            "text": "The faculty Intranet contains syllabi for subjects and study programs, information about student internships, and information about monographic lectures. It also provides access to the browser versions of Office packages like Word, Excel, and PowerPoint. For more information",
+            "text1": "here"
+        }
     },
     "Usos": {
-        "header": "The most important Functions on the USOS Platform",
-        "text1": "To log in to the USOS platform, go to <a href='https://usosweb.amu.edu.pl/' target='_blank'>link</a>, your login is a combination of the first three letters of your first name and the first three letters of your last name.",
-        "text2": "After logging in, go to the FOR STUDENTS tab.",
+        "header": "The most useful Functions on the USOS Platform",
+        "text1": "To log in to the USOS platform, go to",
+        "text1a": ", your login is a combination of the first three letters of your first name and the first three letters of your last name.",
+        "text2": "After logging in, go to the STUDENT'S SECTION tab.",
         "text3": "In the final grades tab, you will find all the grades issued for each subject. Here you will always find your exam and coursework grades, and you can download your academic transcript.",
         "text4": "By going to the REGISTRATIONS -> for courses tab, you will find a list of all available classes for enrollment. Find the name of your field of study and the number of the semester you are currently in. All the courses you need to register for in that semester will be listed here.",
-        "text5": "After registering for courses, remember to go to the Connections tab, where for each course, you must select the connection to the current study period. Without this, you will not be properly enrolled in the course. Also, remember not to create a bulk connection, as it does not work.",
-        "text6": "In the semester completion tab, you will find the status of each semester's completion, the number of points, and the subjects needed for completion. You can also submit a semester for early settlement.",
+        "text5": "After registering for courses, remember to go to the linkage tab, where for each course, you must select the linkage to the current study period. Without this, you will not be properly enrolled in the course. Also, remember not to create a bulk connection, as it does not work.",
+        "text6": "In the promotions tab, you will find the status of each semester's completion, the number of points, and the subjects needed for completion. You can also deliver a semester for early checkup.",
         "text7": "In the applications tab, you can choose and submit from the list of available applications, e.g., an application for extending the exam session.",
         "text8": "In the mLegitymacja tab, you will find the option to order an electronic version of your student ID, later available in the mObywatel app.",
-        "text9": "In the MY USOSWEB tab, you will find information about your class schedule, but remember that the schedule on USOS is often not updated in cases such as class rescheduling. It is best to check your schedule in the <a href='https://uam.sharepoint.com/sites/4203000000/SitePages/Plany-Zajec.aspx' target='_blank'>Intranet</a>.",
+        "text9": "In the MY USOSWEB tab, you will find information about your class schedule, but remember that the schedule on USOS is often not updated in cases such as class rescheduling. It is best to check your schedule in the",
         "text10": "You will also find a preview of your student ID photo and can change privacy settings regarding who can view your photo."
-    }
-    ,
+    },
+    "Intranet": {
+        "Header": "The most useful informations on Intranet",
+        "text1": "To log in to the Intranet, go to", 
+        "text1a": "and use your university email (@st.amu.edu.pl) to log in. If you're logging into Microsoft Office 365 services for the first time, check the instructions available on the site", 
+        "text2": "By clicking the first icon from the top of the vertical menu in the top left corner, you have access to the browser versions of Office 365 applications, including Word, Excel, PowerPoint, Teams, and university Outlook email.", 
+        "text3": "In the search field at the top of the page, search for 'Faculty of Physics'.", 
+        "text4": "Once on the 'Faculty of Physics' group page, go to the 'For Students' tab.", 
+        "text5": "In the 'For Students' tab, you will find up-to-date schedules, study programs and syllabi, information about internships, diploma exams, monographic lectures, and humanities courses."
+    },
     "Footer": {
-        "SocialMedia": "Visti media of the department"
+        "SocialMedia": "YOU WILL FIND UAM HERE"
     }
 }

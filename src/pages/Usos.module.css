@@ -9,12 +9,13 @@
   gap: 30px;
 }
 
-.main p {
-  font-size: 1.4rem;
+.main h1 {
+  font-size: 2.7rem;
 }
 
-.main h1 {
-  font-size: 2.5rem;
+.main a {
+  text-decoration: none;
+  color: var(--usos-a);
 }
 
 .img {
@@ -27,7 +28,12 @@
   background-color: var(--usos-text);
 }
 
-@media only screen and (max-width: 1170px) {
+.main p {
+  font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 900px) {
   .img, .line{
     width: 100%;
   }

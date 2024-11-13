@@ -41,27 +41,31 @@ const Footer = () => {
                 <img src={logo} alt="logo" width="100%" />
               </div>
               <div className={styles.container4}>
-              <NavLink to="/">
-                {t('Nav.Homepage')}
-              </NavLink>
-              <NavLink to="/map">
-                {t('Nav.Map')}
-              </NavLink>
-              <NavLink to="/academic-circles">
-                {t('Nav.Academic-circles')}
-              </NavLink>
-              <NavLink to="/MobileApp">
-                {t('Nav.MobileApp')}
-              </NavLink>
-              <NavLink to="/Info">
-                {t('Nav.Info')}
-              </NavLink>
-              <NavLink to="/Usos">
-                {t('Nav.Usos')}
-              </NavLink>
-              <NavLink to="/Intranet">
-                {t('Nav.Intranet')}
-              </NavLink>
+                <div className={styles.nav}>
+                  <NavLink to="/">
+                    {t('Nav.Homepage')}
+                  </NavLink>
+                  <NavLink to="/map">
+                    {t('Nav.Map')}
+                  </NavLink>
+                  <NavLink to="/academic-circles">
+                    {t('Nav.Academic-circles')}
+                  </NavLink>
+                  <NavLink to="/MobileApp">
+                    {t('Nav.MobileApp')}
+                  </NavLink>
+                </div>
+                <div className={styles.nav}>
+                  <NavLink to="/Info">
+                    {t('Nav.Info')}
+                  </NavLink>
+                  <NavLink to="/Usos">
+                    {t('Nav.Usos')}
+                  </NavLink>
+                  <NavLink to="/Intranet">
+                    {t('Nav.Intranet')}
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className={styles.socialMediaContainer}>
