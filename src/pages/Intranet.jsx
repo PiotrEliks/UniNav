@@ -20,7 +20,7 @@ const Intranet = () => {
       <main data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
       <div className={styles.main}>
           <h1>{t('Intranet.Header')}</h1>
-            <p>{t('Intranet.text1')} <a href="" target="_blank">link</a> {t('Intranet.text1a')} <a href="https://www.office365.amu.edu.pl/pierwsze_logowanie.htm" target="_blank">https://www.office365.amu.edu.pl/pierwsze_logowanie.htm</a></p>
+            <p>{t('Intranet.text1')} <a href="" target="_blank">link</a> {t('Intranet.text1a')} <a href="https://www.office365.amu.edu.pl/pierwsze_logowanie.htm" target="_blank">www</a></p>
             <img src={img1} alt="img1" className={styles.img} />
             <div className={styles.line}/>
             <p>{t('Intranet.text2')}</p>

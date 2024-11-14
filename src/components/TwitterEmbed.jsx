@@ -1,15 +1,33 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import { Timeline } from 'react-twitter-widgets';
 import styles from './TwitterEmbed.module.css';
 import { ThemeContext } from '../contexts/theme.jsx';
-import Loader from './Loader.jsx'
+import Loader from './Loader.jsx';
+import { useMediaQuery } from 'react-responsive';
 
 const TwitterEmbed = () => {
-  const [{ themeName, isContrast }] = useContext(ThemeContext);
+  const [{ themeName }] = useContext(ThemeContext);
+  const isWidth375 = useMediaQuery({ query: '(max-width: 375px)' });
+  const isWidth768 = useMediaQuery({ query: '(max-width: 768px)' });
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [width, setWidth] = useState('40rem');
+  const [height, setHeight] = useState(600);
+
+  useEffect(() => {
+    setLoading(true);
+    if (isWidth375) {
+      setWidth('25rem');
+      setHeight(400);
+    } else if (isWidth768) {
+      setWidth('30rem');
+      setHeight(500);
+    } else {
+      setWidth('40rem');
+      setHeight(600);
+    }
+  }, [isWidth375, isWidth768]);
 
   useEffect(() => {
     setLoading(true);
@@ -25,31 +43,33 @@ const TwitterEmbed = () => {
     setError('Wystąpił błąd podczas ładowania tweetów.');
     setLoading(false);
   };
+
+  const key = `${themeName}-${width}`;
+
   return (
     <div className={styles.container}>
-       {loading && (
+      {loading && (
         <div className={styles.spinnerContainer}>
           <Loader />
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
       <Timeline
-        key={themeName}
+        key={key}
         dataSource={{
           sourceType: 'profile',
           screenName: 'UAM_Poznan',
         }}
         options={{
-          width: '40rem',
-          height: 600,
+          width: width,
+          height: height,
           chrome: 'noheader nofooter noborders noscrollbar',
           tweetLimit: 2,
-          theme: themeName
+          theme: themeName,
         }}
         onLoad={handleLoad}
         onError={handleError}
       />
-
     </div>
   );
 };

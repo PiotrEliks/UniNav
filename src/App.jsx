@@ -13,7 +13,6 @@ import Usos from './pages/Usos.jsx';
 import Intranet from './pages/Intranet.jsx';
 
 function App () {
-  const { t } = useTranslation();
   return (
     <HashRouter>
       <Routes>

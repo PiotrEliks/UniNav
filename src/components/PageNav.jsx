@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./PageNav.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import i18n from '../i18n';
-//import { withNamespaces } from 'react-i18next';
 import { IoLanguage } from "react-icons/io5";
 import { MdLightMode, MdDarkMode, MdContrast } from "react-icons/md";
 import { ThemeContext } from '../contexts/theme.jsx';
@@ -68,7 +67,7 @@ const PageNav = () => {
       </nav>
 
       <div className="language_selector">
-        <button type="button" onClick={toggleTheme} className="btn btn_icon" aria-label="toggle theme" title={themeName === 'dark' ?t('Icons.Light') : t('Icons.Dark')}>
+        <button type="button" onClick={toggleTheme} className="btn btn_icon" aria-label="toggle theme" title={themeName === 'dark' ?t('Icons.Light') : t('Icons.Dark')} disabled={isContrast}>
           {themeName === 'dark' ? (
             <MdLightMode className="icon" />
           ) : (

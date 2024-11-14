@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import PageNav from '../components/PageNav'
 import Footer from '../components/Footer.jsx';
 import { ThemeContext } from '../contexts/theme.jsx';
-//import { withNamespaces } from 'react-i18next';
 import styles from './Homepage.module.css';
 import { useTranslation } from 'react-i18next';
 import TwitterEmbed from '../components/TwitterEmbed.jsx';
@@ -67,7 +66,7 @@ const Homepage = () => {
                                     </div>
                                 </NavLink>
                             </div>
-                            
+
                         </div>
 
                         <div className={styles.right}>

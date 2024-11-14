@@ -33,7 +33,7 @@
             "Header": "Check out the Universtity's posts on X"
         }
     },
-    "Map": {    
+    "Map": {
         "Header": "Interactive map of Faculty od Physics and Astronomy"
     },
     "Academic-circle": {
@@ -203,7 +203,8 @@
         },
         "Library": {
             "Header": "Library of the Faculty of Physics and Astronomy",
-            "text": "The collection of the Library of the Faculty of Physics and Astronomy includes over 30,000 scientific books. The thematic scope of the collection covers publications on physics, mathematics, computer science, chemistry, biology, nanotechnology, biophysics, and astronomy. The library holds more than 200 titles of scientific journals in both print and online versions. The collections can also be accessed on-site in the reading room. The library is located in Sector C on the first floor. For more detailed information:"
+            "text": "The collection of the Library of the Faculty of Physics and Astronomy includes over 30,000 scientific books. The thematic scope of the collection covers publications on physics, mathematics, computer science, chemistry, biology, nanotechnology, biophysics, and astronomy. The library holds more than 200 titles of scientific journals in both print and online versions. The collections can also be accessed on-site in the reading room. The library is located in Sector C on the first floor. For more detailed information",
+            "text1": "here"
         },
         "Sylabus": {
             "Header": "Syllabus and Study Programs",
@@ -237,11 +238,11 @@
     },
     "Intranet": {
         "Header": "The most useful informations on Intranet",
-        "text1": "To log in to the Intranet, go to", 
-        "text1a": "and use your university email (@st.amu.edu.pl) to log in. If you're logging into Microsoft Office 365 services for the first time, check the instructions available on the site", 
-        "text2": "By clicking the first icon from the top of the vertical menu in the top left corner, you have access to the browser versions of Office 365 applications, including Word, Excel, PowerPoint, Teams, and university Outlook email.", 
-        "text3": "In the search field at the top of the page, search for 'Faculty of Physics'.", 
-        "text4": "Once on the 'Faculty of Physics' group page, go to the 'For Students' tab.", 
+        "text1": "To log in to the Intranet, go to",
+        "text1a": "and use your university email (@st.amu.edu.pl) to log in. If you're logging into Microsoft Office 365 services for the first time, check the instructions available on the site",
+        "text2": "By clicking the first icon from the top of the vertical menu in the top left corner, you have access to the browser versions of Office 365 applications, including Word, Excel, PowerPoint, Teams, and university Outlook email.",
+        "text3": "In the search field at the top of the page, search for 'Faculty of Physics'.",
+        "text4": "Once on the 'Faculty of Physics' group page, go to the 'For Students' tab.",
         "text5": "In the 'For Students' tab, you will find up-to-date schedules, study programs and syllabi, information about internships, diploma exams, monographic lectures, and humanities courses."
     },
     "Footer": {

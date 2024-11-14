@@ -12,6 +12,59 @@ const Info = () => {
   const { t } = useTranslation();
   const [{ themeName, toggleTheme, isContrast, toggleContrast }] = useContext(ThemeContext);
   const [displayDivName, setDisplayDivName] = useState('Info');
+
+  const infoRef = useRef(null);
+  const buildingRef = useRef(null);
+  const structureRef = useRef(null);
+  const examRef = useRef(null);
+  const monoLecturesRef = useRef(null);
+  const apprenticeshipRef = useRef(null);
+  const libraryRef = useRef(null);
+  const sylabusRef = useRef(null);
+  const usosRef = useRef(null);
+  const intranetRef = useRef(null);
+
+  const scrollToDiv = (divName) => {
+    switch(divName) {
+      case 'Info':
+        infoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Building':
+        buildingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Structure':
+        structureRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Exam':
+        examRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'MonoLectures':
+        monoLecturesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Apprenticeship':
+        apprenticeshipRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Library':
+        libraryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Sylabus':
+        sylabusRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Usos':
+        usosRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      case 'Intranet':
+        intranetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    scrollToDiv(displayDivName);
+  }, [displayDivName]);
+
   return (
     <>
       <PageNav />
@@ -24,43 +77,42 @@ const Info = () => {
             <div className={styles.left}>
               <h1>{t('Info.List.Header')}</h1>
               <ul>
-                <li onClick={()=>setDisplayDivName('Info')}>{t('Info.List.l1')}</li>
-                <li onClick={()=>setDisplayDivName('Building')}>{t('Info.List.l2')}</li>
-                <li onClick={()=>setDisplayDivName('Structure')}>{t('Info.List.l3')}</li>
-                <li onClick={()=>setDisplayDivName('Exam')}>{t('Info.List.l4')}</li>
-                <li onClick={()=>setDisplayDivName('MonoLectures')}>{t('Info.List.l5')}</li>
-                <li onClick={()=>setDisplayDivName('Apprenticeship')}>{t('Info.List.l6')}</li>
-                <li onClick={()=>setDisplayDivName('Library')}>{t('Info.List.l7')}</li>
-                
-                <li onClick={()=>setDisplayDivName('Sylabus')}>{t('Info.List.l8')}</li>
-                <li onClick={()=>setDisplayDivName('Usos')}>{t('Info.List.l9')}</li>
-                <li onClick={()=>setDisplayDivName('Intranet')}>{t('Info.List.l10')}</li>
+              <li onClick={() => setDisplayDivName('Info')} className={displayDivName === 'Info' ? styles.selected : ''}>{t('Info.List.l1')}</li>
+                <li onClick={() => setDisplayDivName('Building')} className={displayDivName === 'Building' ? styles.selected : ''}>{t('Info.List.l2')}</li>
+                <li onClick={() => setDisplayDivName('Structure')} className={displayDivName === 'Structure' ? styles.selected : ''}>{t('Info.List.l3')}</li>
+                <li onClick={() => setDisplayDivName('Exam')} className={displayDivName === 'Exam' ? styles.selected : ''}>{t('Info.List.l4')}</li>
+                <li onClick={() => setDisplayDivName('MonoLectures')} className={displayDivName === 'MonoLectures' ? styles.selected : ''}>{t('Info.List.l5')}</li>
+                <li onClick={() => setDisplayDivName('Apprenticeship')} className={displayDivName === 'Apprenticeship' ? styles.selected : ''}>{t('Info.List.l6')}</li>
+                <li onClick={() => setDisplayDivName('Library')} className={displayDivName === 'Library' ? styles.selected : ''}>{t('Info.List.l7')}</li>
+                <li onClick={() => setDisplayDivName('Sylabus')} className={displayDivName === 'Sylabus' ? styles.selected : ''}>{t('Info.List.l8')}</li>
+                <li onClick={() => setDisplayDivName('Usos')} className={displayDivName === 'Usos' ? styles.selected : ''}>{t('Info.List.l9')}</li>
+                <li onClick={() => setDisplayDivName('Intranet')} className={displayDivName === 'Intranet' ? styles.selected : ''}>{t('Info.List.l10')}</li>
               </ul>
             </div>
 
             <div className={styles.right}>
               <div className={styles.middle} />
               <div className={styles.rightContent}>
-                {displayDivName === 'Info' && 
-                  <>
+                {displayDivName === 'Info' &&
+                  <div ref={infoRef} className={styles.content}>
                     <h1>{t('Info.Info.Header')}</h1>
                     <p>{t('Info.Info.text')}</p>
                     <div className={styles.corners}>
                       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9DbjM0fxXio?si=DAfCRLVM4tR50wYV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Building' && 
-                  <>
+                {displayDivName === 'Building' &&
+                  <div ref={buildingRef} className={styles.content}>
                     <h1>{t('Info.Building.Header')}</h1>
                     <p>{t('Info.Building.text')} <NavLink to="/map">{t('Info.Building.text1')}</NavLink>.</p>
                     <div className={styles.corners}>
                       <img src={building} alt="building" className={styles.img} />
                     </div>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Structure' && 
-                  <>
+                {displayDivName === 'Structure' &&
+                  <div ref={structureRef} className={styles.content}>
                     <h1>{t('Info.Structure.Header')}</h1>
                     <ul className={styles.listLevel1}>
                       <li>{t('Info.Structure.L1')} <a href="https://if.amu.edu.pl/" target='_blank'><TbWorld className={styles.icon}/></a> - Prof. dr hab. Marcin Ziółek - marziol@amu.edu.pl: </li>
@@ -95,58 +147,49 @@ const Info = () => {
                       <li>{t('Info.Structure.L9')} - Wojciech Płócienniczak - wojplo@amu.edu.pl</li>
                     </ul>
                     <p>{t('Info.Structure.text')} <a href="https://ludzie-dev.wmi.amu.edu.pl/unit/0400000000/" target="_blank">tutaj</a></p>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Exam' && 
-                  <>
+                {displayDivName === 'Exam' &&
+                  <div ref={examRef} className={styles.content}>
                     <h1>{t('Info.Exam.Header')}</h1>
-                    <p>{t('Info.Exam.text')}</p>
-                    <ul>
-                      <li><a href="https://www.fizyka.amu.edu.pl/studenci/egzaminy-dyplomowe/zagadnienia-egzaminacyjne">{t('Info.Exam.l1')}</a></li>
-                      <li><a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0026/429731/Wniosek-o-przeprowadzenie-egzaminu-dyplomowego.doc">{t('Info.Exam.l2')}</a></li>
-                      <li><a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0028/445708/Wytyczne-pisania-prac-dyplomowych.pdf">{t('Info.Exam.l3')}</a></li>
-                      <li><a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0026/445706/Wzor_strony_tytulowej_WF_UAM.pdf">{t('Info.Exam.l4')}</a></li>
-                      <li><a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0029/445709/Wzor_strony_tytulowej_WF_UAM_edytowalny.doc">{t('Info.Exam.l5')}</a></li>
-                      <li><a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0027/445707/Zarzadzenie-Rektora-Nr-3_2020_2021.pdf">{t('Info.Exam.l6')}</a></li>
-                      <li><a href="https://usosdocs.amu.edu.pl/">{t('Info.Exam.l7')}</a></li>
-                    </ul>
-                  </>
+                    <p>{t('Info.Exam.text')} <a href="https://www.fizyka.amu.edu.pl/studenci/egzaminy-dyplomowe/zagadnienia-egzaminacyjne" target='_blank'>{t('Info.Exam.l1')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0026/429731/Wniosek-o-przeprowadzenie-egzaminu-dyplomowego.doc" target='_blank'>{t('Info.Exam.l2')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0028/445708/Wytyczne-pisania-prac-dyplomowych.pdf" target='_blank'>{t('Info.Exam.l3')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0026/445706/Wzor_strony_tytulowej_WF_UAM.pdf" target='_blank'>{t('Info.Exam.l4')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0029/445709/Wzor_strony_tytulowej_WF_UAM_edytowalny.doc" target='_blank'>{t('Info.Exam.l5')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0027/445707/Zarzadzenie-Rektora-Nr-3_2020_2021.pdf" target='_blank'>{t('Info.Exam.l6')}</a>, <a href="https://usosdocs.amu.edu.pl/">{t('Info.Exam.l7')}</a></p>
+                  </div>
                 }
-                {displayDivName === 'MonoLectures' && 
-                  <>
+                {displayDivName === 'MonoLectures' &&
+                  <div ref={monoLecturesRef} className={styles.content}>
                     <h1>{t('Info.MonoLectures.Header')}</h1>
                     <p>{t('Info.MonoLectures.text')} <a href="https://uam.sharepoint.com/sites/4203000000/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=ZTQefy&RootFolder=%2Fsites%2F4203000000%2FShared%20Documents%2FProgramy%20Studi%C3%B3w%20i%20Sylabusy%2FWYK%C5%81ADY%20MONOGRAFICZNE&FolderCTID=0x012000849C46DAB2DF8046990FCFD09D8BED46" target="_blank">{t('Info.MonoLectures.text1')}</a> {t('Info.MonoLectures.text2')}</p>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Apprenticeship' && 
-                  <>
+                {displayDivName === 'Apprenticeship' &&
+                  <div ref={apprenticeshipRef} className={styles.content}>
                     <h1>{t('Info.Apprenticeship.Header')}</h1>
                     <p>{t('Info.Apprenticeship.text')} <a href="https://www.fizyka.amu.edu.pl/studenci/praktyki-studenckie" target="_blank">{t('Info.Apprenticeship.text1')}</a> {t('Info.Apprenticeship.text2')}</p>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Library' && 
-                  <>
+                {displayDivName === 'Library' &&
+                  <div ref={libraryRef} className={styles.content}>
                     <h1>{t('Info.Library.Header')}</h1>
-                    <p>{t('Info.Library.text')} <a href="http://librafa.home.amu.edu.pl/" target='_blank'><TbWorld className={styles.icon}/></a></p>
-                  </>
+                    <p>{t('Info.Library.text')} <a href="http://librafa.home.amu.edu.pl/" target='_blank'>{t('Info.Library.text1')}</a></p>
+                  </div>
                 }
-                {displayDivName === 'Sylabus' && 
-                  <>
+                {displayDivName === 'Sylabus' &&
+                  <div ref={sylabusRef} className={styles.content}>
                     <h1>{t('Info.Sylabus.Header')}</h1>
                     <p>{t('Info.Sylabus.text')} <a href="https://sylabus.amu.edu.pl/pl/20/0/0/6" target="_blank">{t('Info.Sylabus.text1')}</a></p>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Usos' && 
-                  <>
+                {displayDivName === 'Usos' &&
+                  <div ref={usosRef} className={styles.content}>
                     <h1>{t('Info.Usos.Header')}</h1>
                     <p>{t('Info.Usos.text')} <NavLink to="/Usos">{t('Info.Usos.text1')}</NavLink>.</p>
-                  </>
+                  </div>
                 }
-                {displayDivName === 'Intranet' && 
-                  <>
+                {displayDivName === 'Intranet' &&
+                  <div ref={intranetRef} className={styles.content}>
                     <h1>{t('Info.Intranet.Header')}</h1>
                     <p>{t('Info.Intranet.text')} <NavLink to="/Intranet">{t('Info.Intranet.text1')}</NavLink>.</p>
-                  </>
+                  </div>
                 }
               </div>
             </div>

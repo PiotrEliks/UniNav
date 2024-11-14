@@ -7,11 +7,16 @@ const ThemeProvider = ({ children }) => {
   const [themeName, setThemeName] = useState('light');
   useEffect(() => {
     const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setThemeName(darkMediaQuery.matches ? 'dark' : 'light');
-    darkMediaQuery.addEventListener('change', (e) => {
+    if (localStorage.getItem('themeName') !== '') {
+      setThemeName(localStorage.getItem('themeName'));
+    } else {
+       setThemeName(darkMediaQuery.matches ? 'dark' : 'light');
+       darkMediaQuery.addEventListener('change', (e) => {
       setThemeName(e.matches ? 'dark' : 'light');
     });
-  }, []);
+    }
+  }, [localStorage.getItem('themeName')]);
+
   const toggleTheme = () => {
     const name = themeName === 'dark' ? 'light' : 'dark';
     localStorage.setItem('themeName', name);
@@ -23,7 +28,11 @@ const ThemeProvider = ({ children }) => {
   const toggleContrast = () => {
     const contrast = isContrast === true ? false : true;
     localStorage.setItem('isContrast', contrast);
-    setThemeName('dark');
+    if (!isContrast) {
+      setThemeName('dark');
+    } else {
+      setThemeName(localStorage.getItem('themeName'));
+    }
     setIsContrast(contrast);
   };
 
