@@ -25,7 +25,7 @@ const TwitterEmbed = () => {
       setHeight(500);
     } else {
       setWidth('40rem');
-      setHeight(600);
+      setHeight(530);
     }
   }, [isWidth375, isWidth768]);
 

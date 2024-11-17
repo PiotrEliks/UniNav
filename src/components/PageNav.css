@@ -161,4 +161,9 @@ header {
 	  border: none;
 	  cursor: pointer;
 	}
+
+	.currentSite {
+		color: var(--nav-text-hover);
+		border: none;
+	}
   }
