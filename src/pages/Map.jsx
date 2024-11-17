@@ -4,11 +4,11 @@ import Footer from '../components/Footer.jsx';
 import { ThemeContext } from '../contexts/theme.jsx';
 import styles from './Map.module.css';
 import { useTranslation } from 'react-i18next';
-import { FaWindowClose } from "react-icons/fa";
 import Loader from '../components/Loader.jsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useMediaQuery } from 'react-responsive';
+import MetaDecorator from '../components/MetaDecorator.jsx';
 
 const Ground = lazy(() => import('../components/Ground.jsx'));
 const Basement = lazy(() => import('../components/Basement.jsx'));
@@ -89,7 +89,8 @@ const Map = () => {
   };
 
   return (
-    <div>
+    <>
+      <MetaDecorator title={t('Map.title')} />
       <PageNav />
       <main
         className="main"
@@ -97,18 +98,14 @@ const Map = () => {
       >
         <div className={styles.main}>
           <h1>{t('Map.Header')}</h1>
-          <div className={styles.container}>
-            <div className={styles.mapContainer}>
-            {selectedRoom ? (
+          {selectedRoom &&
               <div className={styles.roomInfo}>
                 <h2 className={styles.roomInfoTitle}>{info.title}</h2>
                 <p className={styles.roomInfoText}>{info.info}</p>
-                <div className={styles.closeBtn} onClick={() => setSelectedRoom(null)}>
-                  <FaWindowClose className={styles.closeIcon}/>
-                </div>
-              </div>
-            ) : (
-              <Suspense fallback={
+              </div>}
+          <div className={styles.container}>
+            <div className={styles.mapContainer}>
+            <Suspense fallback={
                 <div className={styles.spinnerContainer}>
                   <Loader />
                 </div>
@@ -127,8 +124,6 @@ const Map = () => {
                   </motion.div>
                 </AnimatePresence>
               </Suspense>
-            )}
-
             </div>
             <div className={styles.levelSelector}>
               <button
@@ -149,12 +144,17 @@ const Map = () => {
                 {isMobile ? <IoIosArrowBack  className={styles.icon}/> : <IoIosArrowUp className={styles.icon} />}
               </button>
             </div>
-            <button onClick={() => setShowElevator(!showElevator)}>Windy</button>
+           { /*<button onClick={() => setShowElevator(!showElevator)}>Windy</button>*/}
           </div>
+          {selectedRoom &&
+              <div className={styles.roomInfo}>
+                <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+                <p className={styles.roomInfoText}>{info.info}</p>
+              </div>}
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

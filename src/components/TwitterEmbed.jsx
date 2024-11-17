@@ -40,7 +40,7 @@ const TwitterEmbed = () => {
 
   const handleError = (err) => {
     console.error(err);
-    setError('Wystąpił błąd podczas ładowania tweetów.');
+    setError('Error');
     setLoading(false);
   };
 

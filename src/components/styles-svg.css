@@ -1,3 +1,10 @@
 .pointer {
     cursor: pointer;
 }
+
+.close-btn {
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 3;
+    stroke-linecap: round;
+}

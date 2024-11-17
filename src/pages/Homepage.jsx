@@ -11,6 +11,7 @@ import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
 import { NavLink } from "react-router-dom";
+import MetaDecorator from '../components/MetaDecorator.jsx';
 
 const Homepage = () => {
     const { t } = useTranslation();
@@ -23,7 +24,8 @@ const Homepage = () => {
     ];
 
     return (
-        <div>
+        <div className="page">
+            <MetaDecorator title={t('Homepage.title')} />
             <PageNav />
             <main className="main" data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
                 <div className={styles.container2}>

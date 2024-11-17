@@ -8,98 +8,103 @@ header {
 	width: 100%;
 	background-color: var(--header-bg);
 	z-index: 10;
-  }
+}
+
+	.currentSite {
+		color: var(--nav-text-hover);
+		border-bottom: 3px solid var(--nav-text-hover);
+	}
 
   header a {
-	margin: 0 2.5rem;
-	text-decoration: none;
-	font-size: 1.7rem;
-	color: var(--nav-text);
-	height: 70px;
-	display: flex;
-	align-items: center;
+		margin: 0 2.5rem;
+		text-decoration: none;
+		font-size: 1.7rem;
+		color: var(--nav-text);
+		height: 70px;
+		display: flex;
+		align-items: center;
   }
 
   header h1 {
-	flex: none;
-	text-align: left;
-	margin: 0;
+		flex: none;
+		text-align: left;
+		margin: 0;
   }
 
   .nav_btn {
-	display: none;
+		display: none;
   }
 
   nav {
-	flex-grow: 1;
-	display: flex;
-	justify-content: center;
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
   }
 
   .language_selector {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 80px;
-	position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 80px;
+		position: relative;
   }
 
   .language_list {
-	position: absolute;
-	top: 100%;
-	background-color: var(--header-bg);
-	color: var(--nav-text);
-	right: 0;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	border: 1px solid var(--nav-text);
+		position: absolute;
+		top: 100%;
+		background-color: var(--header-bg);
+		color: var(--nav-text);
+		right: 0;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border: 1px solid var(--nav-text);
   }
 
   .language_list li {
-	padding: 8px 12px;
-	cursor: pointer;
+		padding: 8px 12px;
+		cursor: pointer;
   }
 
   .language_list li:hover {
-	background-color: var(--header-bg);
-	color: var(--nav-text);
+		background-color: var(--header-bg);
+		color: var(--nav-text);
   }
 
   .btn {
-	cursor: pointer;
-	background-color: transparent;
-	border: none;
-	padding: 0.8em 1.4em;
-	font-size: 0.9rem;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		padding: 0.8em 1.4em;
+		font-size: 0.9rem;
   }
 
   .btn_icon {
-	padding: 0;
+		padding: 0;
   }
 
   .icon {
-	font-size: 2rem;
-	color: var(--header-text);
+		font-size: 2rem;
+		color: var(--header-text);
   }
 
   .name {
-	color: var(--header-text);
+		color: var(--header-text);
   }
 
   .logo {
-	width: 16rem;
+		width: 16rem;
   }
 
   nav a {
-	margin: 0 2.5rem;
-	text-decoration: none;
-	font-size: 1.7rem;
+		margin: 0 2.5rem;
+		text-decoration: none;
+		font-size: 1.7rem;
   }
 
   nav a:hover {
-	color: var(--nav-text-hover);
-	border-bottom: 3px solid var(--nav-text-hover);
+		color: var(--nav-text-hover);
+		border-bottom: 3px solid var(--nav-text-hover);
   }
 
   @media only screen and (max-width: 1260px) {

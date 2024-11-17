@@ -6,7 +6,9 @@
   justify-content: center;
   color: var(--ac-text);
   background-color: var(--ac-bg);
-  padding: 100px 10% 20px 10%;
+  padding: 10rem 10% 2rem 10%;
+  flex: 1;
+  min-height: 100vh;
 }
 
 .main h1 {
@@ -15,17 +17,17 @@
 
 .container {
   column-count: 2;
-  column-gap: 20px;
-  padding-top: 20px;
+  column-gap: 2rem;
+  padding-top: 2rem;
 }
 .card {
   background-color: var(--ac-card-bg);
   color: var(--ac-card-text);
-  padding: 25px;
-  margin-bottom: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
   break-inside: avoid-column;
   --d: 50px;
-  
+
   box-sizing: border-box;
   border: solid #0000;
   border-width: 0 var(--d) var(--d) 0;
@@ -37,21 +39,21 @@
 .title {
   font-weight: 800;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   color: var(--ac-card-line);
 }
 
 .card p {
   font-size: 1.5rem;
-  margin: 5px 0 5px 0;
+  margin: 0.5rem 0 0.5rem 0;
 
 }
 
 .card ul {
   list-style-type: square;
   font-size: 1.2rem;
-  padding-left: 15px;
-  margin-bottom: 15px;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .card a {
@@ -70,10 +72,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
   color: var(--ac-card-icon);
   position: absolute;
-  bottom: 5px;
+  bottom: 0.5rem;
   left: 95%;
   transform: translate( -95%);
   z-index: 1;
@@ -81,7 +83,7 @@
 }
 
 .line {
-  height: 2px;
+  height: 0.2rem;
   width: 100%;
   background-color: var(--ac-card-line);
 }

@@ -16,6 +16,7 @@
         "Language": "Zmiana języka"
     },
     "Homepage": {
+        "title": "UniNav | Nawigacja Wydziału Fizyki i Astronomii UAM",
         "Top": {
             "Welcome": "Witaj!",
             "Text": "Jest to strona dla studentów Wydziału Fizyki i Astronomii Uniwersytetu im. Adama Mickiewicza w Poznaniu, stworzona aby ułatwić znalezienie informacji oraz poruszanie się po wydziale."
@@ -34,9 +35,11 @@
         }
     },
     "Map": {
-        "Header": "Interaktywna mapa wydziału Fizyki i Astronomi"
+        "title": "UniNav | Mapa",
+        "Header": "Interaktywna mapa wydziału Fizyki i Astronomii"
     },
     "Academic-circle": {
+        "title": "UniNav | Studenckie koła naukowe",
         "Header": "Poznaj nasze koła studenckie i znajdź coś dla siebie",
         "First": {
             "Header": "Studenckie Koło Naukowe Akustyków 'SONIC'",
@@ -124,9 +127,46 @@
         }
     },
     "MobileApp": {
-        "Header": "Aplikacja mobilna UniNav"
+        "title": "UniNav | Aplikacja mobilna",
+        "Top": {
+            "Header": "Aplikacja mobilna UniNav",
+            "Text": "Nasza aplikacja mobilna została stworzona z myślą o ułatwieniu nawigacji po Wydziale Fizyki i Astronomii Uniwersytetu Adama Mickiewicza, wykorzystując najnowocześniejsze technologie takie jak Rzeczywistość Rozszerzona (AR) oraz kody QR. Dzięki integracji z interaktywnym systemem nawigacji, aplikacja zapewnia użytkownikom płynne i intuicyjne doświadczenie zarówno na terenie kampusu, jak i zdalnie.",
+            "Button": "Pobierz aplikację"
+        },
+        "Middle": {
+            "Header1": "Cele projektu",
+            "Text1": "W dynamicznie rozwijającym się środowisku akademickim, nasza aplikacja mobilna stanowi odpowiedź na rosnące potrzeby nowoczesnych użytkowników. Projekt ten nie tylko dostarcza innowacyjnych narzędzi nawigacyjnych, ale także promuje tworzenie inkluzywnych i dostępnych przestrzeni edukacyjnych.",
+            "Header2": "Nasze główne cele to:",
+            "List1": {
+                "l1": "Zwiększenie Dostępności: Ułatwienie nawigacji po Wydziale Fizyki i Astronomii dzięki technologii AR, co czyni przestrzeń bardziej przyjazną dla wszystkich użytkowników.",
+                "l2": "Przyjazny Interfejs Webowy: Umożliwienie użytkownikom planowania tras przed przybyciem na miejsce, z uwzględnieniem opcji dostępności dla osób z niepełnosprawnościami.",
+                "l3": "Inkluzywność: Zapewnienie, że platforma jest dostępna i użyteczna dla osób z różnymi potrzebami, w tym dla osób z niepełnosprawnościami."
+            },
+            "Header3": "Dostępność dla wszystkich",
+            "Text2": "Nasza aplikacja została zaprojektowana z myślą o inkluzywności, aby każdy użytkownik, w tym osoby z niepełnosprawnościami, mógł korzystać z jej funkcji bez przeszkód. Oto niektóre z zastosowanych rozwiązań:",
+            "List2": {
+                "l1": "Planowanie Tras Bezschodowych: Aplikacja uwzględnia dostępność tras bez schodów, co jest szczególnie istotne dla osób z ograniczoną mobilnością.",
+                "l2": "Wsparcie dla Osób z Ograniczeniami Wzroku: Dzięki integracji z technologiami wspomagającymi, aplikacja oferuje funkcje takie jak powiększanie tekstu czy odczytywanie na głos informacji, co ułatwia nawigację osobom niedowidzącym."
+            }
+        },
+        "Left": {
+            "Header": "Kluczowe funkcje",
+            "List": {
+                "l1": "Rzeczywistość Rozszerzona (AR): Aplikacja wykorzystuje silnik Unity 3D do tworzenia immersyjnych doświadczeń AR. Użytkownicy mogą poprzez swoje urządzenia mobilne zobaczyć na ekranie wirtualne wskazówki i oznaczenia, które prowadzą ich do wybranych miejsc w budynku wydziału.",
+                "l2": "Kody QR: W strategicznych miejscach na terenie Wydziału Fizyki rozmieszczono kody QR. Skanowanie tych kodów za pomocą aplikacji mobilnej umożliwia uzyskanie szczegółowych wskazówek na temat najkrótszej i najbardziej dostępnej trasy do wybranego pomieszczenia, biura czy kluczowych obiektów.",
+                "l3": "AR Foundation: Dzięki integracji z AR Foundation, kompatybilnym z ARCore, aplikacja zapewnia płynną i stabilną interakcję między rzeczywistą przestrzenią a wirtualnymi narzędziami nawigacyjnymi. Użytkownicy mogą cieszyć się bezproblemowym działaniem aplikacji na różnych urządzeniach mobilnych."
+            }
+        },
+        "Right": {
+            "Header": "Technologie wykorzystane w aplikacji",
+            "List": {
+                "l1": "Unity 3D: Silnik do tworzenia zaawansowanych i interaktywnych doświadczeń AR, umożliwiający tworzenie realistycznych i angażujących wizualizacji.",
+                "l2": "AR Foundation: Biblioteka wspierająca funkcjonalność AR na urządzeniach mobilnych, zapewniająca kompatybilność z ARCore oraz innymi platformami AR."
+            }
+        }
     },
     "Info": {
+        "title": "UniNav | Informacje",
         "Header": "Najbardziej przydatne informacje",
         "List": {
             "Header": "Wybierz z listy:",
@@ -223,6 +263,7 @@
         }
     },
     "Usos": {
+        "title": "UniNav | USOS",
         "header": "Najbardziej potrzebne funkcje na platformie USOS",
         "text1": "Aby zalogować się na platformę USOS, wejdź w",
         "text1a": ", twój login to złączenie pierwszych trzech liter imienia i pierwszych trzech liter nazwiska.",
@@ -234,12 +275,14 @@
         "text7": "W zakładce podania, możesz wybrać i złożyć z listy dostępnych podań, np. podanie o przedłużenie sesji.",
         "text8": "W zakładce mLegitymacja, znajdziesz opcję zamówienia elektronicznej wersji swojej legitymacji studenckiej, dostępnej później w aplikacji mObywatel.",
         "text9": "W zakładce MÓJ USOSWEB, znajdziesz informacje o planie zajęć, ale pamiętaj plan zajęć na USOSie jest często nieuaktualniany w przypadku np. przeniesienia przedmiotu na inne godziny. Plan najlepiej sprawdzaj w",
+        "text9a": "Intranecie",
         "text10": "Znajdziesz tam również podglą swojego zdjęcia do legitymacji oraz zmienisz ustawienia prywatności odnośnie osób, które mogą wyświetlać twoje zdjęcie."
     },
     "Intranet": {
+        "title": "UniNav | Intranet",
         "Header": "Najbardziej potrzebne informacje w Intranecie",
         "text1": "Aby zalogować się do Intranetu wejdź w",
-        "text1a": "i do logowania użyj e-maila uczelnianego (@st.amu.edu.pl). Jeśli logujesz się pierwszy raz do usług Microsoft Office 365 sprawdź instrukcję dostępną na stronie",
+        "text1a": " i do logowania użyj e-maila uczelnianego (@st.amu.edu.pl). Jeśli logujesz się pierwszy raz do usług Microsoft Office 365 sprawdź instrukcję dostępną na stronie",
         "text2": "Po kliknięciu w pierwszą ikonkę od góry pionowego menu w lewym górnym rogu masz dostęp do przeglądarkowych wersji aplikacji z pakietu Office 365, w tym Word, Excel, PowerPoint, Teams i uczelnianą pocztę Outlook.",
         "text3": "W polu do wyszukiwania na górze strony wyszukaj 'Wydział Fizyki'.",
         "text4": "Będąc na stronie grupy 'Wydział Fizyki' przejdź do zakładki 'Dla studenta'.",

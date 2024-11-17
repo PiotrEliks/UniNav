@@ -16,6 +16,7 @@
         "Language": "Change language"
     },
     "Homepage": {
+        "title": "UniNav | Navigation of the Faculty of Physics and Astronomy UAM",
         "Top": {
             "Welcome": "Welcome!",
             "Text": "This webiste is created for students of the Faculty of Physics and Astronomy of Adam Mickiewicz University in Poznań, it's purpose is to make finding informations and navigation throught the Faculty easier."
@@ -34,9 +35,11 @@
         }
     },
     "Map": {
+        "title": "UniNav | Map",
         "Header": "Interactive map of Faculty od Physics and Astronomy"
     },
     "Academic-circle": {
+        "title": "UniNav | Student clubs",
         "Header": "Discover our student clubs and find something for yourself",
         "First": {
             "Header": "Student Scientific Club of Acousticians 'SONIC'",
@@ -123,10 +126,47 @@
             "Management-l5": "Vice President Adrianna Kędziora"
         }
     },
-    "MobileApp": {
-        "Header": "UniNav mobile app"
+   "MobileApp": {
+        "title": "UniNav | Mobile Application",
+        "Top": {
+        "Header": "UniNav Mobile Application",
+        "Text": "Our mobile application is designed to facilitate navigation through the Faculty of Physics and Astronomy at Adam Mickiewicz University by leveraging cutting-edge technologies such as Augmented Reality (AR) and QR codes. By integrating with an interactive navigation system, the app offers users a seamless and intuitive experience both on campus and remotely.",
+        "Button": "Download the App"
+        },
+        "Middle": {
+        "Header1": "Project Goals",
+        "Text1": "In today's rapidly evolving academic environment, our mobile application responds to the growing needs of modern users. This project not only provides innovative navigation tools but also promotes the creation of inclusive and accessible educational spaces.",
+        "Header2": "Our main objectives are:",
+        "List1": {
+            "l1": "Enhancing Accessibility: Facilitating navigation within the Faculty of Physics and Astronomy using AR technology, making the space more user-friendly for all users.",
+            "l2": "User-Friendly Web Interface: Enabling users to plan their routes before arrival, considering accessibility options for individuals with disabilities.",
+            "l3": "Inclusivity: Ensuring that the platform is accessible and useful for individuals with diverse needs, including those with disabilities."
+        },
+        "Header3": "Accessibility for All",
+        "Text2": "Our application is designed with inclusivity in mind, ensuring that every user, including individuals with disabilities, can utilize its features without barriers. Here are some of the implemented solutions:",
+        "List2": {
+            "l1": "Step-Free Route Planning: The app considers the availability of step-free routes, which is particularly important for individuals with limited mobility.",
+            "l2": "Support for Visually Impaired Users: By integrating assistive technologies, the app offers features such as text enlargement and voice-over information, making navigation easier for visually impaired individuals."
+        }
+        },
+        "Left": {
+        "Header": "Key Features",
+        "List": {
+            "l1": "Augmented Reality (AR): The application utilizes the Unity 3D engine to create immersive AR experiences. Users can view virtual cues and markers on their mobile devices, guiding them to desired locations within the faculty building.",
+            "l2": "QR Codes: Strategically placed QR codes throughout the Faculty of Physics enable users to scan them with the mobile app, providing detailed directions for the shortest and most accessible routes to selected rooms, offices, or key facilities.",
+            "l3": "AR Foundation: Integrated with AR Foundation, compatible with ARCore, the app ensures smooth and stable interaction between the physical environment and virtual navigation tools. Users enjoy a hassle-free experience across various mobile devices."
+        }
+        },
+        "Right": {
+        "Header": "Technologies Used in the Application",
+        "List": {
+            "l1": "Unity 3D: A powerful engine for creating advanced and interactive AR experiences, enabling the development of realistic and engaging visualizations.",
+            "l2": "AR Foundation: A library that supports AR functionality on mobile devices, ensuring compatibility with ARCore and other AR platforms."
+        }
+        }
     },
     "Info": {
+        "title": "UniNav | Informations",
         "Header": "The most useful informations",
         "List": {
             "Header": "Select from the list:",
@@ -223,6 +263,7 @@
         }
     },
     "Usos": {
+        "title": "UniNav | USOS",
         "header": "The most useful Functions on the USOS Platform",
         "text1": "To log in to the USOS platform, go to",
         "text1a": ", your login is a combination of the first three letters of your first name and the first three letters of your last name.",
@@ -234,12 +275,14 @@
         "text7": "In the applications tab, you can choose and submit from the list of available applications, e.g., an application for extending the exam session.",
         "text8": "In the mLegitymacja tab, you will find the option to order an electronic version of your student ID, later available in the mObywatel app.",
         "text9": "In the MY USOSWEB tab, you will find information about your class schedule, but remember that the schedule on USOS is often not updated in cases such as class rescheduling. It is best to check your schedule in the",
+        "text9a": "Intranet",
         "text10": "You will also find a preview of your student ID photo and can change privacy settings regarding who can view your photo."
     },
     "Intranet": {
+        "title": "UniNav | Intranet",
         "Header": "The most useful informations on Intranet",
         "text1": "To log in to the Intranet, go to",
-        "text1a": "and use your university email (@st.amu.edu.pl) to log in. If you're logging into Microsoft Office 365 services for the first time, check the instructions available on the site",
+        "text1a": " and use your university email (@st.amu.edu.pl) to log in. If you're logging into Microsoft Office 365 services for the first time, check the instructions available on the site",
         "text2": "By clicking the first icon from the top of the vertical menu in the top left corner, you have access to the browser versions of Office 365 applications, including Word, Excel, PowerPoint, Teams, and university Outlook email.",
         "text3": "In the search field at the top of the page, search for 'Faculty of Physics'.",
         "text4": "Once on the 'Faculty of Physics' group page, go to the 'For Students' tab.",

@@ -1,18 +1,20 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme.jsx';
 import styles from './AcademicCircles.module.css';
 import PageNav from '../components/PageNav';
 import Footer from '../components/Footer';
-import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram, FaTiktok  } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { useTranslation } from 'react-i18next';
+import MetaDecorator from '../components/MetaDecorator.jsx';
 
 const AcademicCircles = () => {
   const { t } = useTranslation();
-  const [{ themeName, toggleTheme, isContrast, toggleContrast }] = useContext(ThemeContext);
+  const [{ themeName, isContrast }] = useContext(ThemeContext);
   return (
     <>
+      <MetaDecorator title={t('Academic-circle.title')} />
       <PageNav />
       <main data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
         <div className={styles.main}>

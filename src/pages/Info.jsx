@@ -7,10 +7,12 @@ import Footer from '../components/Footer.jsx';
 import { useTranslation } from 'react-i18next';
 import building from '../assets/building.jpg';
 import { TbWorld } from "react-icons/tb";
+import MetaDecorator from '../components/MetaDecorator.jsx';
+import LazyImage from '../components/LazyImage';
 
 const Info = () => {
   const { t } = useTranslation();
-  const [{ themeName, toggleTheme, isContrast, toggleContrast }] = useContext(ThemeContext);
+  const [{ themeName, isContrast }] = useContext(ThemeContext);
   const [displayDivName, setDisplayDivName] = useState('Info');
 
   const infoRef = useRef(null);
@@ -67,6 +69,7 @@ const Info = () => {
 
   return (
     <>
+      <MetaDecorator title={t('Info.title')} />
       <PageNav />
       <main data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
         <div className={styles.main}>
@@ -98,7 +101,7 @@ const Info = () => {
                     <h1>{t('Info.Info.Header')}</h1>
                     <p>{t('Info.Info.text')}</p>
                     <div className={styles.corners}>
-                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9DbjM0fxXio?si=DAfCRLVM4tR50wYV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9DbjM0fxXio?si=DAfCRLVM4tR50wYV" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                   </div>
                 }
@@ -107,7 +110,11 @@ const Info = () => {
                     <h1>{t('Info.Building.Header')}</h1>
                     <p>{t('Info.Building.text')} <NavLink to="/map">{t('Info.Building.text1')}</NavLink>.</p>
                     <div className={styles.corners}>
-                      <img src={building} alt="building" className={styles.img} />
+                      <LazyImage
+                        src={building}
+                        alt="building"
+                        className={styles.img}
+                      />
                     </div>
                   </div>
                 }
@@ -152,7 +159,7 @@ const Info = () => {
                 {displayDivName === 'Exam' &&
                   <div ref={examRef} className={styles.content}>
                     <h1>{t('Info.Exam.Header')}</h1>
-                    <p>{t('Info.Exam.text')} <a href="https://www.fizyka.amu.edu.pl/studenci/egzaminy-dyplomowe/zagadnienia-egzaminacyjne" target='_blank'>{t('Info.Exam.l1')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0026/429731/Wniosek-o-przeprowadzenie-egzaminu-dyplomowego.doc" target='_blank'>{t('Info.Exam.l2')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0028/445708/Wytyczne-pisania-prac-dyplomowych.pdf" target='_blank'>{t('Info.Exam.l3')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0026/445706/Wzor_strony_tytulowej_WF_UAM.pdf" target='_blank'>{t('Info.Exam.l4')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0029/445709/Wzor_strony_tytulowej_WF_UAM_edytowalny.doc" target='_blank'>{t('Info.Exam.l5')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0027/445707/Zarzadzenie-Rektora-Nr-3_2020_2021.pdf" target='_blank'>{t('Info.Exam.l6')}</a>, <a href="https://usosdocs.amu.edu.pl/">{t('Info.Exam.l7')}</a></p>
+                    <p>{t('Info.Exam.text')} <a href="https://www.fizyka.amu.edu.pl/studenci/egzaminy-dyplomowe/zagadnienia-egzaminacyjne" target='_blank'>{t('Info.Exam.l1')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0026/429731/Wniosek-o-przeprowadzenie-egzaminu-dyplomowego.doc" target='_blank'>{t('Info.Exam.l2')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0028/445708/Wytyczne-pisania-prac-dyplomowych.pdf" target='_blank'>{t('Info.Exam.l3')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0026/445706/Wzor_strony_tytulowej_WF_UAM.pdf" target='_blank'>{t('Info.Exam.l4')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/word_doc/0029/445709/Wzor_strony_tytulowej_WF_UAM_edytowalny.doc" target='_blank'>{t('Info.Exam.l5')}</a>, <a href="https://www.fizyka.amu.edu.pl/__data/assets/pdf_file/0027/445707/Zarzadzenie-Rektora-Nr-3_2020_2021.pdf" target='_blank'>{t('Info.Exam.l6')}</a>, <a href="https://usosdocs.amu.edu.pl/" target='_blank'>{t('Info.Exam.l7')}</a></p>
                   </div>
                 }
                 {displayDivName === 'MonoLectures' &&

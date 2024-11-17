@@ -1,39 +1,147 @@
 .main {
-  padding: 70px 0 0 0;
-  background-color: black;
+  padding: 7rem 0 0 0;
+  background-color: var(--app-right-text);
   width: 100%;
-}
-
-.main h1 {
-  font-size: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 100vh;
 }
 
 .top {
   width: 100%;
-  height: 400px;
-  background-color: var(--intranet-top-bg);
-  color: var(--intranet-top-text);
+  background-color: var(--app-top-bg);
+  color: var(--app-top-text);
   --top:
    linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
    radial-gradient(farthest-side,#000 98%,#0000) bottom/100px 100px no-repeat;
   -webkit-mask: var(--top);
           mask: var(--top);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10% 10rem 10%;
+}
+
+.top h1 {
+  font-size: 2.7rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.top p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.top button {
+  margin-top: 3rem;
+  border: none;
+  background-color: var(--app-top-text);
+  padding: 1rem;
+  border-radius: 2.5rem;
+  color: var(--app-top-bg);
+  -webkit-box-shadow: 6px 8px 40px 0px var(--map-shadow);
+  -moz-box-shadow: 6px 8px 40px 0px var(--map-shadow);
+  box-shadow: 6px 8px 40px 0px var(--map-shadow);
+}
+
+.top button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .middle {
   width: 100%;
-  height: 300px;
-  background-color: var(--intranet-middle-bg);
-  color: var(--intranet-middle-text);
-  --bottom: radial-gradient(calc(10px + 50px) at 50% -10px,#0000 98%,#000);
+  background-color: var(--app-middle-bg);
+  color: var(--app-middle-text);
+  --bottom: radial-gradient(calc(1rem + 5rem) at 50% -1rem,#0000 98%,#000);
   -webkit-mask: var(--bottom);
           mask: var(--bottom);
-  margin-top: -40px;
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem 10% 3rem 10%;
+  flex: 1;
+}
+
+.middle h2 {
+  font-size: 2.6rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.middle h3 {
+  font-size: 2.3rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.middle p {
+  font-size: 2rem;
+}
+
+.middle li {
+  font-size: 1.8rem;
+  margin-left: 2.5rem;
 }
 
 .bottom {
   width: 100%;
-  height: 400px;
-  background-color: var(--intranet-bottom-bg);
-  color: var(--intranet-bottom-text);
+  min-height: 40rem;
+  display: flex;
+  flex-direction: row;
+  border-top: 0.2rem solid var(--app-right-text);
+  border-bottom: 0.2rem solid var(--app-right-text);
+  flex: 1;
+}
+
+
+.left {
+  width: 50%;
+  background-color: var(--app-left-bg);
+  color: var(--app-left-text);
+  padding: 1.5rem;
+  border-right: 0.2rem solid var(--app-right-text);
+}
+
+.left h2, .right h2 {
+  font-size: 2.6rem;
+}
+
+.left li, .right li {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+}
+
+.right {
+  width: 50%;
+  background-color: var(--app-right-bg);
+  color: var(--app-right-text);
+  padding: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .top {
+    padding: 0 3rem 10rem 3rem;
+  }
+
+  .middle {
+    padding: 7rem 3rem 10rem 3rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .left {
+    border: none;
+    border-bottom: 0.2rem solid var(--app-right-text);
+  }
 }

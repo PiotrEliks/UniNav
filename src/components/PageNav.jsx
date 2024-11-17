@@ -28,6 +28,37 @@ const PageNav = () => {
     i18n.changeLanguage(lng);
 }, [localStorage.getItem("lng")]);
 
+const [currentSite, setCurrentSite] = useState('');
+
+useEffect(() => {
+  const renderLevel = async () => {
+    try {
+      switch (window.location.href.split('/').slice(-1).toString()) {
+      case '':
+        return setCurrentSite('main');
+      case 'map':
+        return setCurrentSite('map');
+      case 'academic-circles':
+        return setCurrentSite('academic-circles');
+      case 'MobileApp':
+        return setCurrentSite('MobileApp');
+      case 'Info':
+        return setCurrentSite('Info');
+      case 'Usos':
+        return setCurrentSite('Usos');
+      case 'Intranet':
+        return setCurrentSite('Intranet');
+      default:
+        return setCurrentSite('main');
+    }
+  } catch (error){
+    console.log('error');
+  }
+
+  };
+  renderLevel();
+}, [window.location.href.split('/').slice(-1)]);
+
   return (
     <header data-theme={isContrast ? 'contrast' : themeName === 'dark' ? 'dark' : 'light'}>
       <button className="nav_btn" onClick={showNavbar} title={t('Icons.Menu')}>
@@ -38,27 +69,26 @@ const PageNav = () => {
           <img src={logo} alt="logo" width="100%" />
         </div>
       </NavLink>
-
       <nav ref={navRef}>
-        <NavLink to="/">
+        <NavLink to="/" className={currentSite === 'main' ? 'currentSite' : ''}>
           {t('Nav.Homepage')}
         </NavLink>
-        <NavLink to="/map">
+        <NavLink to="/map" className={currentSite === 'map' ? 'currentSite' : ''}>
           {t('Nav.Map')}
         </NavLink>
-        <NavLink to="/academic-circles">
+        <NavLink to="/academic-circles" className={currentSite === 'academic-circles' ? 'currentSite' : ''}>
           {t('Nav.Academic-circles')}
         </NavLink>
-        <NavLink to="/MobileApp">
+        <NavLink to="/MobileApp" className={currentSite === 'MobileApp' ? 'currentSite' : ''}>
           {t('Nav.MobileApp')}
         </NavLink>
-        <NavLink to="/Info">
+        <NavLink to="/Info" className={currentSite === 'Info' ? 'currentSite' : ''}>
           {t('Nav.Info')}
         </NavLink>
-        <NavLink to="/Usos">
+        <NavLink to="/Usos" className={currentSite === 'Usos' ? 'currentSite' : ''}>
           {t('Nav.Usos')}
         </NavLink>
-        <NavLink to="/Intranet">
+        <NavLink to="/Intranet" className={currentSite === 'Intranet' ? 'currentSite' : ''}>
           {t('Nav.Intranet')}
         </NavLink>
         <button className="nav_btn nav_close_btn" onClick={showNavbar}>

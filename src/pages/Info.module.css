@@ -1,8 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
   background-color: var(--info-bg);
-  padding: 70px 0 0 0;
+  padding: 7rem 0 0 0;
 }
 
 .main h1 {
@@ -17,14 +19,16 @@
 .container {
   width: 100%;
   display: flex;
+  flex-direction: row;
   position: relative;
+  flex: 1;
   background-color: var(--info-left-bg);
 }
 
 .top {
   width: 100%;
   background-color: var(--home-top-bg);
-  height: 100px;
+  height: 10rem;
   color: var(--home-top-color);
   display: flex;
   flex-direction: column;
@@ -35,9 +39,9 @@
 
 .left {
   background-color: var(--info-left-bg);
-  height: 100%;
   display: flex;
   width: 29%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -45,7 +49,7 @@
   z-index: 2;
   top: 0;
   left: 0;
-  --c: 70px;
+  --c: 7rem;
   aspect-ratio: 2/3;
   mask: radial-gradient(var(--c) 60% at right,#0000 calc(100% - 1px),#000);
   background: var(--info-left-bg);
@@ -56,13 +60,13 @@
 }
 
 .left ul {
-  margin-top: 10px;
+  margin-top: 1rem;
   list-style-type: circle;
   font-size: 2rem;
 }
 
 .left li {
-  padding: 5px;
+  padding: 0.5rem;
 }
 
 .left li:hover {
@@ -71,25 +75,35 @@
 }
 
 .middle{
-  height: 660px;
   width: 29%;
   background-color: var(--info-right-bg);;
+  flex: 1;
+}
+
+.right {
+  background-color: var(--info-right-bg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
 }
 
 .rightContent {
   width: 71%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: var(--info-right-text);
-  padding: 15px 0 15px 0;
+  padding: 1.5rem 0 1.5rem 0;
 }
 
 .rightContent h1 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .rightContent p {
@@ -102,12 +116,12 @@
 }
 
 .corners {
-  margin-top: 20px;
-  width: 700px;
-  height: 400px;
-  --s: 100px;
-  border: 8px solid var(--home-left-bg);
-  padding: 10px;
+  margin-top: 2rem;
+  width: 70rem;
+  height: 40rem;
+  --s: 10rem;
+  border: 0.8rem solid var(--home-left-bg);
+  padding: 1rem;
   background: #f2f2f2 content-box;
   mask:
     conic-gradient(#000 0 0) content-box,
@@ -121,24 +135,13 @@
 }
 
 
-.right {
-  background-color: var(--info-right-bg);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  position: relative;
-  z-index: 1;
-}
 
 .listLevel1 {
   font-size: 2rem;
 }
 
 .listLevel1 li {
-  padding: 5px 0 5px 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 .listLevel2 {
@@ -146,8 +149,8 @@
 }
 
 .listLevel2 li {
-  padding: 5px;
-  margin-left: 20px;
+  padding: 0.5rem;
+  margin-left: 2rem;
 }
 
 .selected {
@@ -171,33 +174,33 @@
 
   .rightContent {
     width: 65%;
-    margin: 10px;
+    margin: 1rem;
   }
 }
 
 @media only screen and (max-width: 1170px) {
   .container {
       flex-direction: column;
-      min-height: 800px;
+      min-height: 80rem;
   }
 
   .left {
       width: 100%;
       position: relative;
       z-index: 2;
-      max-height: 450px;
+      max-height: 45rem;
   }
 
   .right {
       width: 100%;
       position: relative;
       z-index: 1;
-      min-height: 350px;
+      min-height: 35rem;
   }
 
   .rightContent {
     width: 100%;
-    padding: 15px;
+    padding: 1.5rem;
   }
 
   .middle {

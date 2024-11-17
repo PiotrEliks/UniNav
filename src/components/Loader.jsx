@@ -4,7 +4,7 @@ import styles from './Loader.module.css';
 import { ThemeContext } from '../contexts/theme.jsx';
 
 function Loader() {
-  const [{ themeName, isContrast }] = useContext(ThemeContext);
+  const [{ themeName }] = useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <RotatingLines

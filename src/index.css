@@ -21,11 +21,13 @@
   --map-btn-bg: #B4DDB7;
   --map-btn-text: #000000;
   --map-btn-bg-hover: #8ECB93;
-  --map-bg: #EBDBF8;
+  --map-bg: #FAF9F6;
   --map-header: #000000;
-  --map-close-icon: #000000;
   --map-border: #000000;
-  --map-roomInfo-bg: #B4DDB7;
+  --map-roomInfo-bg: #FFFFFF;
+  --map-roomInfo-text: #000000;
+  --map-roomInfo-shadow: rgba(0, 0, 0, 1);
+  --map-shadow: rgba(0, 0, 0, 1);
 
   --usos-bg: #FAF9F6;
   --usos-text: #000000;
@@ -43,6 +45,14 @@
   --app-header: #000000;
   --app-text: #000000;
   --app-line: #B886D8;
+  --app-top-bg: #FAF9F6;
+  --app-top-text: #000000;
+  --app-middle-bg: #8ECB93;
+  --app-middle-text: #000000;
+  --app-left-bg: #EBDBF8;
+  --app-left-text: #000000;
+  --app-right-bg: #FAF9F6;
+  --app-right-text: #000000;
 
   --info-left-bg: #8ECB93;
   --info-left-text: #000000;
@@ -93,11 +103,13 @@
   --map-btn-bg: #4F8A5B;
   --map-btn-text: #FFFFFF;
   --map-btn-bg-hover: #7FBB9D;
-  --map-bg: #B3A1D5;
+  --map-bg: #28282B;
   --map-header: #FFFFFF;
-  --map-close-icon: #FFFFFF;
   --map-border: #000000;
-  --map-roomInfo-bg: #4F8A5B;
+  --map-roomInfo-bg: #000000;
+  --map-roomInfo-text: #FFFFFF;
+  --map-roomInfo-shadow: rgb(117, 108, 108);
+  --map-shadow: rgb(117, 108, 108);
 
   --usos-bg: #28282B;
   --usos-text: #FFFFFF;
@@ -115,6 +127,14 @@
   --app-header: #FFFFFF;
   --app-text: #FFFFFF;
   --app-line: #B3A1D5;
+  --app-top-bg: #28282B;
+  --app-top-text: #FFFFFF;
+  --app-middle-bg: #7FBB9D;
+  --app-middle-text: #000000;
+  --app-left-bg: #B3A1D5;
+  --app-left-text: #000000;
+  --app-right-bg: #28282B;
+  --app-right-text: #FFFFFF;
 
   --info-left-bg: #7FBB9D;
   --info-left-text: #000000;
@@ -168,9 +188,11 @@
   --map-btn-bg-hover: #00ADAD;
   --map-bg: #000000;
   --map-header: #FFFF00;
-  --map-close-icon: #FFFF00;
   --map-border: #00FFFF;
-  --map-roomInfo-bg: #000000;
+  --map-roomInfo-bg: #00FFFF;
+  --map-roomInfo-text: #000000;
+  --map-roomInfo-shadow: rgb(0, 0, 0);
+  --map-shadow: rgb(0, 0, 0);
 
   --usos-bg: #000000;
   --usos-text: #FFFF00;
@@ -188,6 +210,14 @@
   --app-header: #00FFFF;
   --app-text: #FFFF00;
   --app-line: #FFFF00;
+  --app-top-bg: #000000;
+  --app-top-text: #FFFF00;
+  --app-middle-bg: #000000;
+  --app-middle-text: #00FFFF;
+  --app-left-bg: #000000;
+  --app-left-text: #00FFFF;
+  --app-right-bg: #000000;
+  --app-right-text: #FFFF00;
 
   --info-left-bg: #FFFFFF;
   --info-left-text: #000000;
@@ -218,16 +248,28 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
   font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -235,13 +277,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 70px;
+  padding-top: 7rem;
   width: 100%;
 }
 
   /* width */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 0.8rem;
     }
 
     /* Track */
@@ -252,7 +294,7 @@ body {
     /* Handle */
     ::-webkit-scrollbar-thumb {
     background: var(--color-5);
-    height: 20px;
+    height: 2rem;
     }
 
     /* Handle on hover */

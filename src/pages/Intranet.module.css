@@ -18,23 +18,40 @@
   color: var(--usos-a);
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .img {
   width: 65%;
+  height: auto;
 }
 
 .line {
   height: 2px;
   width: 80%;
   background-color: var(--usos-text);
+  margin-top: 20px;
 }
 
 .main p {
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 
 @media only screen and (max-width: 900px) {
-  .img, .line{
+  .img, .line, .main p, .content {
     width: 100%;
   }
 }
