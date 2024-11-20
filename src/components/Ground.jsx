@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import ground from "../assets/parter_with_colors.svg";
+import ground from "../assets/parter_colors.svg";
 import sektorA from "../assets/ground/sektorA.svg";
-import sektorB from "../assets/ground/sektorA.svg";
+import sektorB from "../assets/ground/sektorB.svg";
 import sektorC from "../assets/ground/sektorC.svg";
 import sektorD from "../assets/ground/sektorD.svg";
-import sektorE from "../assets/ground/sektorA.svg";
-import sektorF from "../assets/ground/sektorA.svg";
-import sektorG from "../assets/ground/sektorA.svg";
-import sektorH from "../assets/ground/sektorA.svg";
-import sektorI from "../assets/ground/sektorA.svg";
-import sektorJ from "../assets/ground/sektorA.svg";
+import sektorE from "../assets/ground/sektorE.svg";
+import sektorF from "../assets/ground/sektorF.svg";
+import sektorG from "../assets/ground/sektorG.svg";
+import sektorH from "../assets/ground/sektorH.svg";
+import sektorI from "../assets/ground/sektorI.svg";
+import sektorJ from "../assets/ground/sektorJ.svg";
 import sektorK from "../assets/ground/sektorK.svg";
 import closeBtn from '../assets/ground/close-btn.svg';
 import './styles-svg.css'
