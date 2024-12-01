@@ -4,12 +4,17 @@ import styles from './Intranet.module.css';
 import PageNav from '../components/PageNav';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
-import LazyImage from '../components/LazyImage';
+import ImageWithPlaceholder from '../components/ImageWithPlaceholder.jsx';
 import img1 from '../assets/Intranet/img1.png';
 import img2 from '../assets/Intranet/img2.png';
 import img3 from '../assets/Intranet/img3.png';
 import img4 from '../assets/Intranet/img4.png';
 import img5 from '../assets/Intranet/img5.png';
+import img1Small from '../assets/USOS/img1-small.png';
+import img2Small from '../assets/USOS/img2-small.png';
+import img3Small from '../assets/USOS/img3-small.png';
+import img4Small from '../assets/USOS/img4-small.png';
+import img5Small from '../assets/USOS/img5-small.png';
 import MetaDecorator from '../components/MetaDecorator.jsx';
 
 const Intranet = () => {
@@ -17,11 +22,11 @@ const Intranet = () => {
   const [{ themeName, isContrast }] = useContext(ThemeContext);
 
   const images = [
-    { pl: img1, alt: 'img1' },
-    { pl: img2, alt: 'img2' },
-    { pl: img3, alt: 'img3' },
-    { pl: img4, alt: 'img4' },
-    { pl: img5, alt: 'img5' },
+    { pl: img1, alt: 'img1', small: img1Small },
+    { pl: img2, alt: 'img2', small: img2Small },
+    { pl: img3, alt: 'img3', small: img3Small },
+    { pl: img4, alt: 'img4', small: img4Small },
+    { pl: img5, alt: 'img5', small: img5Small },
   ];
 
   const texts = [
@@ -51,10 +56,11 @@ const Intranet = () => {
                   <p>{t(texts[index].key)}</p>
                 )}
               </div>
-              <LazyImage
+              <ImageWithPlaceholder
                 src={image.pl}
+                placeholderSrc={image.small}
                 alt={image.alt}
-                className={styles.img}
+                className={styles.imgContainer}
               />
               {index !== texts.length-1 ? <div className={styles.line} /> : null}
             </div>

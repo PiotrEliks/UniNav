@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react';
 import ground from "../assets/parter_colors.svg";
 import sektorA from "../assets/ground/sektorA.svg";
 import sektorB from "../assets/ground/sektorB.svg";
@@ -12,17 +12,50 @@ import sektorI from "../assets/ground/sektorI.svg";
 import sektorJ from "../assets/ground/sektorJ.svg";
 import sektorK from "../assets/ground/sektorK.svg";
 import closeBtn from '../assets/ground/close-btn.svg';
-import './styles-svg.css'
+import './styles-svg.css';
 import { useMediaQuery } from 'react-responsive';
+import Loader from './Loader';
 
-const Ground = ({ setSelectedRoom, setInfo, showElevator }) => {
+const Ground = ({ setSelectedRoom, setInfo }) => {
+  const sektorImages = {
+    A: sektorA,
+    B: sektorB,
+    C: sektorC,
+    D: sektorD,
+    E: sektorE,
+    F: sektorF,
+    G: sektorG,
+    H: sektorH,
+    I: sektorI,
+    J: sektorJ,
+    K: sektorK,
+  };
+
+  useEffect(() => {
+    Object.values(sektorImages).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [sektorImages]);
 
   const isMobile = useMediaQuery({ query: '(max-width: 1200px)' });
 
   const roomInfo = {
     sectorA: {
       title: 'Sektor A',
-      info: 'Sale: 1,2,3,4,5'
+      info: {
+        "4": "Pokój konferencyjny",
+        "5": "Sala szkoleniowa",
+        "6": "Biuro zarządu",
+        "7": "Sala spotkań",
+        "8": "Laboratorium",
+        "9": "Sala wykładowa",
+        "12": "Pokój administracyjny",
+        "13": "Sala warsztatowa",
+        "14": "Pokój socjalny",
+        "15/16": "Sala konferencyjna",
+        "17": "Sala testowa",
+      }
     },
     sectorB: {
       title: 'Sektor B',
@@ -53,7 +86,7 @@ const Ground = ({ setSelectedRoom, setInfo, showElevator }) => {
       info: 'Sale: 1,2,3,4,5'
     },
     sectorI: {
-      title: 'Sektor C',
+      title: 'Sektor I',
       info: 'Sale: 1,2,3,4,5'
     },
     sectorJ: {
@@ -67,215 +100,206 @@ const Ground = ({ setSelectedRoom, setInfo, showElevator }) => {
   };
 
   const handleRoomClick = (roomId) => {
-    setSelectedRoom(roomId);
-    setInfo(roomInfo[roomId]);
+    const roomKey = `sector${roomId}`;
+    if (roomInfo[roomKey]) {
+      setSelectedRoom(roomKey);
+      setInfo(roomInfo[roomKey]);
+    }
   };
 
   const [sektor, setSektor] = useState('');
   const [isSektor, setIsSektor] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleDisplaySektor = (selectedSektor) => {
+  const handleDisplaySektor = useCallback((selectedSektor) => {
     setSektor(selectedSektor);
     setIsSektor(true);
-  };
+    setLoading(true);
+  }, []);
 
-  const handleCloseSektor = () => {
+  const handleCloseSektor = useCallback(() => {
     setSektor('');
+    setInfo(null);
     setIsSektor(false);
-  }
+    setLoading(false);
+  }, [setInfo]);
 
   const renderSektor = () => {
-    switch (sektor) {
-      case 'A':
-        return <image height="100%" width="100%" href={sektorA} />;
-      case 'B':
-        return <image height="100%" width="100%" href={sektorB} />;
-      case 'C':
-        return <image height="100%" width="100%" href={sektorC} />;
-      case 'D':
-        return <image height="100%" width="100%" href={sektorD} />;
-      case 'E':
-        return <image height="100%" width="100%" href={sektorE} />;
-      case 'F':
-        return <image height="100%" width="100%" href={sektorF} />;
-      case 'G':
-        return <image height="100%" width="100%" href={sektorG} />;
-      case 'H':
-        return <image height="100%" width="100%" href={sektorH} />;
-      case 'I':
-        return <image height="100%" width="100%" href={sektorI} />;
-      case 'J':
-        return <image height="100%" width="100%" href={sektorJ} />;
-      case 'K':
-        return <image height="100%" width="100%" href={sektorK} />;
-      default:
-        return null;
-    }
+    if (!sektor) return null;
+    const ImageComponent = sektorImages[sektor];
+    if (!ImageComponent) return null;
+    return  (
+      <>
+        {loading && <Loader className="sector-loader" />}
+        <image
+          height="100%"
+          width="100%"
+          href={ImageComponent}
+          onLoad={() => setLoading(false)}
+          onError={() => setLoading(false)}
+        />
+      </>
+    )
   };
 
   return (
-    <svg width={isMobile ? '414' : '750'} height={isMobile ? '490' : '842'} xmlns="http://www.w3.org/2000/svg" onClick={(e) => handleRoomClick(e.target.id)}>
+    <svg
+      width={isMobile ? '414' : '750'}
+      height={isMobile ? '490' : '842'}
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={(e) => handleRoomClick(e.target.id)}
+    >
       {!isSektor ? <image height="100%" width="100%" href={ground} /> : null}
       {isMobile ?
         <>
-          <rect id="sectorH" x="318" y="305" width="33" height="78" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('H')}>
-            <title>
-              {roomInfo["sectorH"].title}
-            </title>
-          </rect>
-          <rect id="sectorF" x="318" y="197" width="33" height="77" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('F')}>
-            <title>
-              {roomInfo["sectorF"].title}
-            </title>
-          </rect>
-          <rect id="sectorD" x="318" y="87" width="33" height="78" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('D')}>
-            <title>
-              {roomInfo["sectorD"].title}
-            </title>
-          </rect>
-          <rect id="sectorG" x="242" y="274" width="77" height="35" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('G')}>
-            <title>
-              {roomInfo["sectorG"].title}
-            </title>
-          </rect>
-          <rect id="sectorI" x="242" y="382" width="76" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('I')}>
-            <title>
-              {roomInfo["sectorI"].title}
-            </title>
-          </rect>
-          <rect id="sectorE" x="242" y="165" width="76" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('E')}>
-            <title>
-              {roomInfo["sectorE"].title}
-            </title>
-          </rect>
-          <rect id="sectorC" x="242" y="55" width="77" height="34" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('C')}>
-            <title>
-              {roomInfo["sectorC"].title}
-            </title>
-          </rect>
-          <rect id="sectorA" x="41" y="165" width="77" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('A')}>
+          <rect id="A" x="41" y="165" width="77" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('A')}>
             <title>
               {roomInfo["sectorA"].title}
             </title>
           </rect>
-          <rect id="sectorB" x="22" y="57" width="205" height="31" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+          <rect id="B" x="22" y="57" width="205" height="31" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
             <title>
               {roomInfo["sectorB"].title}
             </title>
           </rect>
-          <rect id="sectorB" x="148" y="88" width="40" height="107" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+          <rect id="C" x="242" y="55" width="77" height="34" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('C')}>
             <title>
-              {roomInfo["sectorB"].title}
+              {roomInfo["sectorC"].title}
             </title>
           </rect>
-          <rect id="sectorB" x="22" y="28" width="30" height="30" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+          <rect id="D" x="318" y="87" width="33" height="78" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('D')}>
             <title>
-              {roomInfo["sectorB"].title}
+              {roomInfo["sectorD"].title}
             </title>
           </rect>
-          <circle id="sectorB" cx="72" cy="43" r="22" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+          <rect id="E" x="242" y="165" width="76" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('E')}>
             <title>
-              {roomInfo["sectorB"].title}
+              {roomInfo["sectorE"].title}
             </title>
-          </circle>
-          <rect id="sectorK" x="360" y="370" width="36" height="90" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('K')}>
+          </rect>
+          <rect id="F" x="318" y="197" width="33" height="77" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('F')}>
+            <title>
+              {roomInfo["sectorF"].title}
+            </title>
+          </rect>
+          <rect id="G" x="242" y="274" width="77" height="35" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('G')}>
+            <title>
+              {roomInfo["sectorG"].title}
+            </title>
+          </rect>
+          <rect id="H" x="318" y="305" width="33" height="78" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('H')}>
+            <title>
+              {roomInfo["sectorH"].title}
+            </title>
+          </rect>
+          <rect id="I" x="242" y="382" width="76" height="33" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('I')}>
+            <title>
+              {roomInfo["sectorI"].title}
+            </title>
+          </rect>
+          <rect id="J" x="242" y="470" width="77" height="34" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('J')}>
+            <title>
+              {roomInfo["sectorJ"].title}
+            </title>
+          </rect>
+          <rect id="K" x="360" y="370" width="36" height="90" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('K')}>
             <title>
               {roomInfo["sectorK"].title}
             </title>
           </rect>
         </>
-         :
-          <>
-            <rect id="sectorH" x="575" y="530" width="61" height="143" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('H')}>
-              <title>
-                {roomInfo["sectorH"].title}
-              </title>
-            </rect>
-            <rect id="sectorF" x="575" y="334" width="61" height="141" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('F')}>
-              <title>
-                {roomInfo["sectorF"].title}
-              </title>
-            </rect>
-            <rect id="sectorD" x="575" y="136" width="61" height="141" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('D')}>
-              <title>
-                {roomInfo["sectorD"].title}
-              </title>
-            </rect>
-            <rect id="sectorG" x="435" y="474" width="143" height="57" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('G')}>
-              <title>
-                {roomInfo["sectorG"].title}
-              </title>
-            </rect>
-            <rect id="sectorJ" x="435" y="670" width="143" height="59" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('J')}>
-              <title>
-                {roomInfo["sectorJ"].title}
-              </title>
-            </rect>
-            <rect id="sectorI" x="410" y="558" width="85" height="85" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('I')}>
-              <title>
-                {roomInfo["sectorI"].title}
-              </title>
-            </rect>
-            <rect id="sectorE" x="435" y="277" width="143" height="57" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('E')}>
-              <title>
-                {roomInfo["sectorE"].title}
-              </title>
-            </rect>
-            <rect id="sectorC" x="435" y="80" width="143" height="58" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('C')}>
-              <title>
-                {roomInfo["sectorC"].title}
-              </title>
-            </rect>
-            <rect id="sectorA" x="75" y="275" width="139" height="60" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('A')}>
-              <title>
-                {roomInfo["sectorA"].title}
-              </title>
-            </rect>
-            <rect id="sectorB" x="40" y="82" width="370" height="54" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
-              <title>
-                {roomInfo["sectorB"].title}
-              </title>
-            </rect>
-            <rect id="sectorB" x="269" y="136" width="73" height="195" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
-              <title>
-                {roomInfo["sectorB"].title}
-              </title>
-            </rect>
-            <rect id="sectorB" x="40" y="30" width="60" height="52" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
-              <title>
-                {roomInfo["sectorB"].title}
-              </title>
-            </rect>
-            <circle id="sectorB" cx="132" cy="53" r="38" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
-              <title>
-                {roomInfo["sectorB"].title}
-              </title>
-            </circle>
-            <rect id="sectorK" x="650" y="650" width="74" height="165" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('K')}>
-              <title>
-                {roomInfo["sectorK"].title}
-              </title>
-            </rect>
-            {showElevator &&
-              <>
-                <rect id="sectorK" x="607" y="297" width="10" height="10" fill="blue" className="pointer"/>
-                <rect id="sectorK" x="607" y="492" width="11" height="11" fill="blue" className="pointer"/>
-                <rect id="sectorK" x="607" y="690" width="10" height="10" fill="blue" className="pointer"/>
-              </>
-            }
-          </>
-        }
-        {isSektor ?
-          <>
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              {renderSektor()}
-              <image height="20" width="20" x={isMobile ? '380' : '715'} y="10" href={closeBtn} onClick={() => handleCloseSektor()} className="close-btn"/>
-            </svg>
-          </>
-          :
-          null}
+        :
+        <>
+          <rect id="A" x="75" y="275" width="139" height="60" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('A')}>
+            <title>
+              {roomInfo["sectorA"].title}
+            </title>
+          </rect>
+          <rect id="B" x="40" y="82" width="370" height="54" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+            <title>
+              {roomInfo["sectorB"].title}
+            </title>
+          </rect>
+          <rect id="B" x="269" y="136" width="73" height="195" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+            <title>
+              {roomInfo["sectorB"].title}
+            </title>
+          </rect>
+          <rect id="B" x="40" y="30" width="60" height="52" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+            <title>
+              {roomInfo["sectorB"].title}
+            </title>
+          </rect>
+          <circle id="B" cx="132" cy="53" r="38" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('B')}>
+            <title>
+              {roomInfo["sectorB"].title}
+            </title>
+          </circle>
+          <rect id="C" x="435" y="80" width="143" height="58" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('C')}>
+            <title>
+              {roomInfo["sectorC"].title}
+            </title>
+          </rect>
+          <rect id="D" x="575" y="136" width="61" height="141" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('D')}>
+            <title>
+              {roomInfo["sectorD"].title}
+            </title>
+          </rect>
+          <rect id="E" x="435" y="277" width="143" height="57" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('E')}>
+            <title>
+              {roomInfo["sectorE"].title}
+            </title>
+          </rect>
+          <rect id="F" x="575" y="334" width="61" height="141" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('F')}>
+            <title>
+              {roomInfo["sectorF"].title}
+            </title>
+          </rect>
+          <rect id="G" x="435" y="474" width="143" height="57" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('G')}>
+            <title>
+              {roomInfo["sectorG"].title}
+            </title>
+          </rect>
+          <rect id="H" x="575" y="530" width="61" height="143" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('H')}>
+            <title>
+              {roomInfo["sectorH"].title}
+            </title>
+          </rect>
+          <rect id="I" x="410" y="558" width="85" height="85" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('I')}>
+            <title>
+              {roomInfo["sectorI"].title}
+            </title>
+          </rect>
+          <rect id="J" x="435" y="670" width="143" height="59" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('J')}>
+            <title>
+              {roomInfo["sectorJ"].title}
+            </title>
+          </rect>
+          <rect id="K" x="650" y="650" width="74" height="165" fill="transparent" className="pointer" onClick={() => handleDisplaySektor('K')}>
+            <title>
+              {roomInfo["sectorK"].title}
+            </title>
+          </rect>
+        </>
+      }
+      {isSektor ?
+        <>
+          {renderSektor()}
+          <image
+            height="20"
+            width="20"
+            x={isMobile ? '380' : '715'}
+            y="10"
+            href={closeBtn}
+            onClick={handleCloseSektor}
+            className="close-btn"
+          />
+        </>
+        :
+        null
+      }
     </svg>
   )
 }
 
-export default Ground
+export default React.memo(Ground);

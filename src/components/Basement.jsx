@@ -253,4 +253,4 @@ const Basement = ({ setSelectedRoom, setInfo }) => {
   )
 }
 
-export default Basement
+export default React.memo(Basement)

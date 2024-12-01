@@ -1,26 +1,30 @@
-import React, { useContext, useState, Suspense, lazy } from 'react';
+import React, { useContext, useState, useMemo, useCallback } from 'react';
 import PageNav from '../components/PageNav';
 import Footer from '../components/Footer.jsx';
 import { ThemeContext } from '../contexts/theme.jsx';
 import styles from './Map.module.css';
 import { useTranslation } from 'react-i18next';
-import Loader from '../components/Loader.jsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useMediaQuery } from 'react-responsive';
 import MetaDecorator from '../components/MetaDecorator.jsx';
+import Ground from '../components/Ground.jsx';
+import Basement from '../components/Basement.jsx';
+import LevelOne from '../components/LevelOne.jsx';
+import LevelTwo from '../components/LevelTwo.jsx';
+import LevelThree from '../components/LevelThree.jsx';
+import debounce from 'lodash.debounce';
 
-const Ground = lazy(() => import('../components/Ground.jsx'));
-const Basement = lazy(() => import('../components/Basement.jsx'));
-const LevelOne = lazy(() => import('../components/LevelOne.jsx'));
-const LevelTwo = lazy(() => import('../components/LevelTwo.jsx'));
-const LevelThree = lazy(() => import('../components/LevelThree.jsx'));
+const MemoizedGround = React.memo(Ground);
+const MemoizedBasement = React.memo(Basement);
+const MemoizedLevelOne = React.memo(LevelOne);
+const MemoizedLevelTwo = React.memo(LevelTwo);
+const MemoizedLevelThree = React.memo(LevelThree);
 
 const Map = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1200px)' });
   const { t } = useTranslation();
   const [{ themeName, isContrast }] = useContext(ThemeContext);
-  const [showElevator, setShowElevator] = useState(false);
 
   const [state, setState] = useState({
     selectedLevel: 0,
@@ -29,22 +33,38 @@ const Map = () => {
 
   const { selectedLevel, transitionDirection } = state;
   const [selectedRoom, setSelectedRoom] = useState(null);
-  const [info, setInfo] = useState([]);
+  const [info, setInfo] = useState(null);
+
+  const levelNames = {
+    '-1': 'Basement',
+    '0': 'Ground',
+    '1': 'LevelOne',
+    '2': 'LevelTwo',
+    '3': 'LevelThree'
+  };
+
+  const maps = useMemo(() => ({
+    Basement: <MemoizedBasement setSelectedRoom={setSelectedRoom} setInfo={setInfo} />,
+    Ground: <MemoizedGround setSelectedRoom={setSelectedRoom} setInfo={setInfo} />,
+    LevelOne: <MemoizedLevelOne setSelectedRoom={setSelectedRoom} setInfo={setInfo} />,
+    LevelTwo: <MemoizedLevelTwo setSelectedRoom={setSelectedRoom} setInfo={setInfo} />,
+    LevelThree: <MemoizedLevelThree setSelectedRoom={setSelectedRoom} setInfo={setInfo} />,
+  }), [setSelectedRoom, setInfo]);
 
   const renderLevel = () => {
     switch (selectedLevel) {
       case -1:
-        return <Basement setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return maps.Basement;
       case 0:
-        return <Ground setSelectedRoom={setSelectedRoom} setInfo={setInfo}  showElevator={showElevator} />;
+        return maps.Ground;
       case 1:
-        return <LevelOne setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return maps.LevelOne;
       case 2:
-        return <LevelTwo setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return maps.LevelTwo;
       case 3:
-        return <LevelThree setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return maps.LevelThree;
       default:
-        return <Ground setSelectedRoom={setSelectedRoom} setInfo={setInfo} />;
+        return maps.Ground;
     }
   };
 
@@ -52,40 +72,32 @@ const Map = () => {
     const validLevels = [-1, 0, 1, 2, 3];
     if (validLevels.includes(newLevel) && newLevel !== selectedLevel) {
       const direction = newLevel > selectedLevel ? 'up' : 'down';
-      console.log(`Changing level from ${selectedLevel} to ${newLevel} (${direction})`);
-
       setState({
         selectedLevel: newLevel,
         transitionDirection: direction
       });
-
       setSelectedRoom(null);
+      setInfo(null);
     }
   };
 
-  const goUp = () => {
-    setValidSelectedLevel(selectedLevel + 1);
-  };
+  const setValidSelectedLevelDebounced = useMemo(
+    () => debounce(setValidSelectedLevel, 5),
+    [selectedLevel]
+  );
 
-  const goDown = () => {
-    setValidSelectedLevel(selectedLevel - 1);
-  };
+  const goUp = useCallback(() => {
+    setValidSelectedLevelDebounced(selectedLevel + 1);
+  }, [selectedLevel, setValidSelectedLevelDebounced]);
+
+  const goDown = useCallback(() => {
+    setValidSelectedLevelDebounced(selectedLevel - 1);
+  }, [selectedLevel, setValidSelectedLevelDebounced]);
 
   const variants = {
-    initial: (direction) => ({
-      y: direction === 'up' ? -100 : 100,
-      opacity: 0
-    }),
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: 'easeInOut' }
-    },
-    exit: (direction) => ({
-      y: direction === 'up' ? 100 : -100,
-      opacity: 0,
-      transition: { duration: 0.5, ease: 'easeInOut' }
-    })
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
+    exit: { opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }
   };
 
   return (
@@ -98,32 +110,37 @@ const Map = () => {
       >
         <div className={styles.main}>
           <h1>{t('Map.Header')}</h1>
-          {selectedRoom &&
-              <div className={styles.roomInfo}>
-                <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+          {selectedRoom && info && (
+            <div className={styles.roomInfo}>
+              <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+              {typeof info.info === 'string' ? (
                 <p className={styles.roomInfoText}>{info.info}</p>
-              </div>}
+              ) : typeof info.info === 'object' ? (
+                <ul>
+                  {Object.entries(info.info).map(([roomNumber, description]) => (
+                    <li key={roomNumber}>
+                      <strong>Sala {roomNumber}:</strong> {description}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          )}
           <div className={styles.container}>
             <div className={styles.mapContainer}>
-            <Suspense fallback={
-                <div className={styles.spinnerContainer}>
-                  <Loader />
-                </div>
-              }>
-                <AnimatePresence custom={transitionDirection} mode="wait">
-                  <motion.div
-                    key={selectedLevel}
-                    custom={transitionDirection}
-                    variants={variants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    className={styles.mapWrapper}
-                  >
-                    {renderLevel()}
-                  </motion.div>
-                </AnimatePresence>
-              </Suspense>
+              <AnimatePresence custom={transitionDirection}>
+                <motion.div
+                  key={levelNames[selectedLevel]}
+                  custom={transitionDirection}
+                  variants={variants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className={styles.mapWrapper}
+                >
+                  {renderLevel()}
+                </motion.div>
+              </AnimatePresence>
             </div>
             <div className={styles.levelSelector}>
               <button
@@ -131,7 +148,7 @@ const Map = () => {
                 onClick={goDown}
                 disabled={selectedLevel === -1}
               >
-                {isMobile ? <IoIosArrowForward  className={styles.icon}/> : <IoIosArrowDown className={styles.icon} />}
+                {isMobile ? <IoIosArrowForward className={styles.icon} /> : <IoIosArrowDown className={styles.icon} />}
               </button>
               <div className={styles.currentLevel}>
                 <p className={styles.icon}>{selectedLevel}</p>
@@ -141,16 +158,10 @@ const Map = () => {
                 onClick={goUp}
                 disabled={selectedLevel === 3}
               >
-                {isMobile ? <IoIosArrowBack  className={styles.icon}/> : <IoIosArrowUp className={styles.icon} />}
+                {isMobile ? <IoIosArrowBack className={styles.icon} /> : <IoIosArrowUp className={styles.icon} />}
               </button>
             </div>
-           { /*<button onClick={() => setShowElevator(!showElevator)}>Windy</button>*/}
           </div>
-          {selectedRoom &&
-              <div className={styles.roomInfo}>
-                <h2 className={styles.roomInfoTitle}>{info.title}</h2>
-                <p className={styles.roomInfoText}>{info.info}</p>
-              </div>}
         </div>
       </main>
       <Footer />

@@ -25,6 +25,10 @@
   align-items: center;
 }
 
+.imgContainer {
+  width: 65%;
+}
+
 .content {
   width: 65%;
   display: flex;
@@ -54,4 +58,8 @@
   .img, .line, .main p, .content {
     width: 100%;
   }
+  .imgContainer {
+    width: 90%;
+  }
+
 }

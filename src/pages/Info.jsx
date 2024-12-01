@@ -6,9 +6,11 @@ import PageNav from '../components/PageNav.jsx';
 import Footer from '../components/Footer.jsx';
 import { useTranslation } from 'react-i18next';
 import building from '../assets/building.jpg';
+import buildingSmall from '../assets/building-small.jpg';
 import { TbWorld } from "react-icons/tb";
 import MetaDecorator from '../components/MetaDecorator.jsx';
 import LazyImage from '../components/LazyImage';
+import ImageWithPlaceholder from '../components/ImageWithPlaceholder.jsx';
 
 const Info = () => {
   const { t } = useTranslation();
@@ -110,10 +112,11 @@ const Info = () => {
                     <h1>{t('Info.Building.Header')}</h1>
                     <p>{t('Info.Building.text')} <NavLink to="/map">{t('Info.Building.text1')}</NavLink>.</p>
                     <div className={styles.corners}>
-                      <LazyImage
+                      <ImageWithPlaceholder
                         src={building}
+                        placeholderSrc={buildingSmall}
                         alt="building"
-                        className={styles.img}
+                        className={styles.cornersContainer}
                       />
                     </div>
                   </div>

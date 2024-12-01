@@ -172,4 +172,4 @@ const LevelThree = ({ setSelectedRoom, setInfo }) => {
   )
 }
 
-export default LevelThree
+export default React.memo(LevelThree)
