@@ -36,7 +36,8 @@
     },
     "Map": {
         "title": "UniNav | Mapa",
-        "Header": "Interaktywna mapa wydziału Fizyki i Astronomii"
+        "Header": "Interaktywna mapa wydziału Fizyki i Astronomii",
+        "text": "Kliknij w wybrany sektor na poniższej mapie, aby wyświetlić szczegółowe informacje"
     },
     "Academic-circle": {
         "title": "UniNav | Studenckie koła naukowe",

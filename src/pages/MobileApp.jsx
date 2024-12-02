@@ -18,7 +18,12 @@ const MobileApp = () => {
           <div className={styles.top}>
           <h1>{t('MobileApp.Top.Header')}</h1>
           <p>{t('MobileApp.Top.Text')}</p>
-          <button onClick={()=>{}}>{t('MobileApp.Top.Button')}</button>
+          <button onClick={(e) => {
+            e.preventDefault();
+            window.open('https://daxpl.itch.io/uninav', '_blank');
+            }}>
+              {t('MobileApp.Top.Button')}
+            </button>
           </div>
           <div className={styles.middle}>
             <h2>{t('MobileApp.Middle.Header1')}</h2>

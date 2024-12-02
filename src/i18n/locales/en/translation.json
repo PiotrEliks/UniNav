@@ -36,7 +36,8 @@
     },
     "Map": {
         "title": "UniNav | Map",
-        "Header": "Interactive map of Faculty of Physics and Astronomy"
+        "Header": "Interactive map of Faculty of Physics and Astronomy",
+        "text": "Click on a selected sector on the map below to display detailed informations"
     },
     "Academic-circle": {
         "title": "UniNav | Student clubs",

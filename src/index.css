@@ -106,8 +106,8 @@
   --map-bg: #28282B;
   --map-header: #FFFFFF;
   --map-border: #000000;
-  --map-roomInfo-bg: #000000;
-  --map-roomInfo-text: #FFFFFF;
+  --map-roomInfo-bg: #FFFFFF;
+  --map-roomInfo-text: #000000;
   --map-roomInfo-shadow: rgb(117, 108, 108);
   --map-shadow: rgb(117, 108, 108);
 

@@ -110,22 +110,7 @@ const Map = () => {
       >
         <div className={styles.main}>
           <h1>{t('Map.Header')}</h1>
-          {selectedRoom && info && (
-            <div className={styles.roomInfo}>
-              <h2 className={styles.roomInfoTitle}>{info.title}</h2>
-              {typeof info.info === 'string' ? (
-                <p className={styles.roomInfoText}>{info.info}</p>
-              ) : typeof info.info === 'object' ? (
-                <ul>
-                  {Object.entries(info.info).map(([roomNumber, description]) => (
-                    <li key={roomNumber}>
-                      <strong>Sala {roomNumber}:</strong> {description}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
-          )}
+          <p className={styles.text}>{t('Map.text')}</p>
           <div className={styles.container}>
             <div className={styles.mapContainer}>
               <AnimatePresence custom={transitionDirection}>
@@ -162,6 +147,22 @@ const Map = () => {
               </button>
             </div>
           </div>
+          {selectedRoom && info && (
+            <div className={styles.roomInfo}>
+              <h2 className={styles.roomInfoTitle}>{info.title}</h2>
+              {typeof info.info === 'string' ? (
+                <p className={styles.roomInfoText}>{info.info}</p>
+              ) : typeof info.info === 'object' ? (
+                <ul>
+                  {Object.entries(info.info).map(([roomNumber, description]) => (
+                    <li key={roomNumber}>
+                      <strong>Sala {roomNumber}:</strong> {description}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          )}
         </div>
       </main>
       <Footer />
