@@ -10,6 +10,9 @@ import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
+import img5 from "../assets/img5.jpg";
+import img6 from "../assets/img6.jpg";
+import img7 from "../assets/img7.jpg";
 import { NavLink } from "react-router-dom";
 import MetaDecorator from '../components/MetaDecorator.jsx';
 
@@ -21,6 +24,9 @@ const Homepage = () => {
         {url: img2, alt: "img2"},
         {url: img3, alt: "img3"},
         {url: img4, alt: "img4"},
+        {url: img5, alt: "img5"},
+        {url: img6, alt: "img6"},
+        {url: img7, alt: "img7"},
     ];
 
     return (

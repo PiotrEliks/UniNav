@@ -10,11 +10,11 @@ import img2 from '../assets/Intranet/img2.png';
 import img3 from '../assets/Intranet/img3.png';
 import img4 from '../assets/Intranet/img4.png';
 import img5 from '../assets/Intranet/img5.png';
-import img1Small from '../assets/USOS/img1-small.png';
-import img2Small from '../assets/USOS/img2-small.png';
-import img3Small from '../assets/USOS/img3-small.png';
-import img4Small from '../assets/USOS/img4-small.png';
-import img5Small from '../assets/USOS/img5-small.png';
+import img1Small from '../assets/Intranet/img1-small.png';
+import img2Small from '../assets/Intranet/img2-small.png';
+import img3Small from '../assets/Intranet/img3-small.png';
+import img4Small from '../assets/Intranet/img4-small.png';
+import img5Small from '../assets/Intranet/img5-small.png';
 import MetaDecorator from '../components/MetaDecorator.jsx';
 
 const Intranet = () => {

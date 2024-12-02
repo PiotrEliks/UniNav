@@ -13,6 +13,7 @@
 .main h1 {
   font-size: 2.7rem;
   color: var(--map-header);
+  padding: 1rem;
 }
 
 .container {
@@ -80,7 +81,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 2rem;
   position: relative;
   width: 60%;
   margin-top: 40px;
@@ -89,8 +90,12 @@
   box-shadow: 6px 5px 24px -9px var(--map-roomInfo-shadow);
 }
 
+.roomInfo li {
+  padding: 0.3rem 0 0.3rem 0;
+}
+
 .roomInfoTitle {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .roomInfoText {
@@ -104,8 +109,8 @@
 }
 
 .mapContainer {
-  width: 750px;
-  height: 842px;
+  width: 550px;
+  height: 642px;
   display: flex;
   align-items: center;
   justify-content: center;
