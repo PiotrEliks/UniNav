@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import level1 from "../assets/pietro1.svg";
-import sektorA from "../assets/ground/sektorA.svg";
-import sektorC from "../assets/ground/sektorC.svg";
-import sektorD from "../assets/ground/sektorD.svg";
-import sektorE from "../assets/ground/sektorA.svg";
+import sektorA from "../assets/levelOne/sektorA.svg";
+import sektorC from "../assets/levelOne/sektorC.svg";
+import sektorD from "../assets/levelOne/sektorD.svg";
+import sektorE from "../assets/levelOne/sektorE.svg";
 import sektorF from "../assets/ground/sektorA.svg";
 import sektorG from "../assets/ground/sektorA.svg";
 import sektorH from "../assets/ground/sektorA.svg";
